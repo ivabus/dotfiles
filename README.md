@@ -2,9 +2,16 @@
 
 ## Default dotfiles installation
 
-- zshrc (oh-my-zsh + autosuggestion + syntax highlighting) ([oh-my-zsh](https://ohmyz.sh) + [zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/) + [zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
+- zshrc ([oh-my-zsh](https://ohmyz.sh) + [zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/) + [zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
 - [ivabus-zsh-theme](https://github.com/ivabus/ivabus-zsh-theme)
-- nvim config
+- neovim config
+
+During the installation you can configure git by embedded configurator:
+
+ - user.name
+ - user.email
+ - core.editor
+ - code signing
 
 ```sh
 sh -c "$(curl -fsSL https://ivabus.dev/dotfiles)"

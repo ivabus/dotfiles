@@ -35,6 +35,7 @@ echo "${GREEN}user.name:       ${DEFAULTC}$GITNAME"
 echo "${GREEN}user.email:      ${DEFAULTC}$GITEMAIL"
 echo "${GREEN}core.editor:     ${DEFAULTC}$GITEDITOR"
 echo "${GREEN}pull.rebase:     ${DEFAULTC}false (merge)"
+
 if [[ $answer = [Yy] ]] 
 then
 echo "${GREEN}commit.codesign: ${DEFAULTC}true"
