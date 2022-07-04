@@ -5,7 +5,7 @@ GREEN="\033[32m"
 RED="\033[31m"
 DEFAULTC="\033[0m"
 
-echo "${GREEN}Welcome to ivabus .dotfiles installer$DEFAULT"
+echo "${GREEN}Welcome to ivabus .dotfiles installer$DEFAULTC"
 echo "Dotfiles will be installed to $HOME/.dotfiles"
 echo "Press enter to continue"
 read A
