@@ -32,8 +32,15 @@ sh $HOME/.dotfiles/tools/relink.sh
 
 cd $CURRENTDIR
 
+if [[ $(uname) = "Darwin"]]
+then
+    sh tools/mac.sh
+fi
+
 echo "${GREEN}Dotfiles installed and linked.$DEFAULTC"
 read -p "Would you like to configure git? (y/N): " answer
 if [[ $answer = [Yy] ]]; then
 	sh tools/git.sh
 fi
+
+exec zsh
