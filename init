@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if ! command -v git &> /dev/null
+then
+	echo "git should be installed"
+	exit 255
+fi
+git clone https://github.com/ivabus/ivabus-dotfiles $HOME/.dotfiles
+sh $HOME/.dotfiles/tools/install.sh
