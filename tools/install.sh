@@ -45,4 +45,6 @@ if [[ $answer = [Yy] ]]; then
 	sh tools/git.sh
 fi
 
+chmod +x $HOME/.dotfiles/tools/*
+
 exec zsh
