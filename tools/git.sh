@@ -2,9 +2,9 @@
 
 GREEN="\033[32m"
 RED="\033[31m"
-DEFAULTC="\033[0m"
+CLEAR_COLOR="\033[0m"
 
-echo "${GREEN}Setting up git$DEFAULTC"
+echo "${GREEN}Setting up git$CLEAR_COLOR"
 read -p "Enter your name for commits: " GITNAME
 git config --global user.name "$GITNAME"
 read -p "Enter your email for commits: " GITEMAIL
@@ -30,17 +30,17 @@ then
 fi
 git config --global core.editor $GITEDITOR
 
-echo "\n${RED}Git configured with:$DEFAULTC"
-echo "${GREEN}user.name:       ${DEFAULTC}$GITNAME"
-echo "${GREEN}user.email:      ${DEFAULTC}$GITEMAIL"
-echo "${GREEN}core.editor:     ${DEFAULTC}$GITEDITOR"
-echo "${GREEN}pull.rebase:     ${DEFAULTC}false (merge)"
+echo "\n${RED}Git configured with:$CLEAR_COLOR"
+echo "${GREEN}user.name:       ${CLEAR_COLOR}$GITNAME"
+echo "${GREEN}user.email:      ${CLEAR_COLOR}$GITEMAIL"
+echo "${GREEN}core.editor:     ${CLEAR_COLOR}$GITEDITOR"
+echo "${GREEN}pull.rebase:     ${CLEAR_COLOR}false (merge)"
 
 if [[ $answer = [Yy] ]] 
 then
-echo "${GREEN}commit.codesign: ${DEFAULTC}true"
-echo "${GREEN}gpg.program:     ${DEFAULTC}gpg2"
-echo "${GREEN}user.signingkey: ${DEFAULTC}$GPGKEYID"
+echo "${GREEN}commit.codesign: ${CLEAR_COLOR}true"
+echo "${GREEN}gpg.program:     ${CLEAR_COLOR}gpg2"
+echo "${GREEN}user.signingkey: ${CLEAR_COLOR}$GPGKEYID"
 else
-echo "${GREEN}commit.codesign: ${DEFAULTC}false"
+echo "${GREEN}commit.codesign: ${CLEAR_COLOR}false"
 fi

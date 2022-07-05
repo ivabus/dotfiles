@@ -5,12 +5,12 @@
 
 CURRENTDIR="$(pwd)"
 GREEN="\033[32m"
-DEFAULTC="\033[0m"
+CLEAR_COLOR="\033[0m"
 
 cd $HOME/.dotfiles
-echo "${GREEN}Upgrading dotfiles$DEFAULTC"
+echo "1) ${GREEN}Upgrading dotfiles$CLEAR_COLOR"
 git pull
 sh tools/relink.sh
-echo "${GREEN}Upgrading oh-my-zsh$DEFAULTC"
+echo "2) ${GREEN}Upgrading oh-my-zsh$CLEAR_COLOR"
 zsh -c "source $ZSH/oh-my-zsh.sh && omz update" > /dev/null
 cd $CURRENTDIR
