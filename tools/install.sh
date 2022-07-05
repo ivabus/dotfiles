@@ -7,7 +7,7 @@ CLEAR_COLOR="\033[0m"
 
 echo "${GREEN}Welcome to ivabus .dotfiles installer$CLEAR_COLOR"
 echo "Dotfiles will be installed to $HOME/.dotfiles"
-echo "Press enter to continue"
+echo "Press enter to proceed"
 read A
 
 # check for zsh
