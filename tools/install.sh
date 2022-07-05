@@ -34,7 +34,7 @@ sh $HOME/.dotfiles/tools/relink.sh
 
 cd $CURRENTDIR
 
-if [[ $(uname) = "Darwin"]]
+if [[ $(uname) = "Darwin" ]]
 then
     sh tools/mac.sh
 fi
