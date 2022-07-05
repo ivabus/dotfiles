@@ -36,13 +36,13 @@ cd $CURRENTDIR
 
 if [[ $(uname) = "Darwin" ]]
 then
-    sh tools/mac.sh
+    sh $HOME/.dotfiles/tools/mac.sh
 fi
 
 echo "${GREEN}Dotfiles installed and linked.$CLEAR_COLOR"
 read -p "Would you like to configure git? (y/N): " answer
 if [[ $answer = [Yy] ]]; then
-	sh tools/git.sh
+	sh $HOME/.dotfiles/tools/git.sh
 fi
 
 chmod +x $HOME/.dotfiles/tools/*
