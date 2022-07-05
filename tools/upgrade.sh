@@ -9,7 +9,7 @@ CLEAR_COLOR="\033[0m"
 
 cd $HOME/.dotfiles
 echo "1) ${GREEN}Upgrading dotfiles$CLEAR_COLOR"
-git pull
+git pull > /dev/null 2>&1
 sh tools/relink.sh
 echo "2) ${GREEN}Upgrading oh-my-zsh$CLEAR_COLOR"
 zsh -c "source $ZSH/oh-my-zsh.sh && omz update" > /dev/null
