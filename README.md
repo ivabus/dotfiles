@@ -1,6 +1,6 @@
 # ivabus-dotfiles
 
-## Default dotfiles installation
+Features:
 
 - zshrc ([oh-my-zsh](https://ohmyz.sh) + [zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/) + [zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
 - [ivabus-zsh-theme](https://github.com/ivabus/ivabus-zsh-theme)
