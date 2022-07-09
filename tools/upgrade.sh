@@ -15,6 +15,7 @@ then
 else
 	echo "$HOME/.dotfiles couldn't be 'git pull'ed, check your connection to internet or run tools/reinstall.sh"
 	exit 1
+fi
 sh tools/relink.sh
 echo "2) ${GREEN}Upgrading oh-my-zsh$CLEAR_COLOR"
 zsh -c "source $ZSH/oh-my-zsh.sh && omz update" > /dev/null
