@@ -13,4 +13,4 @@ echo "${GREEN}.zshrc linked: $CLEAR_COLOR$HOME/.dotfiles/configs/zshrc $GREEN-> 
 ln -s $HOME/.dotfiles/configs/nvim.vim $HOME/.config/nvim/init.vim
 echo "${GREEN}neovim config linked: $CLEAR_COLOR$HOME/.dotfiles/configs/nvim.vim $GREEN-> $CLEAR_COLOR$HOME/.config/nvim/init.vim"
 ln -s $HOME/.dotfiles/configs/alacritty.yml $HOME/.config/alacritty/alacritty.yml
-echo "${GREEN}alacritty config linked: $CLEAR_COLOR$HOME/.dotfiles/configs/alacritty.yml $GREEN-> $CLEAR_COLOR$HOME/.config/nvim/init.vim"
+echo "${GREEN}alacritty config linked: $CLEAR_COLOR$HOME/.dotfiles/configs/alacritty.yml $GREEN-> $CLEAR_COLOR$HOME/.config/alacritty/alacritty.yml"
