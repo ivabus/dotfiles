@@ -7,7 +7,7 @@ GREEN="\033[32m"
 CLEAR_COLOR="\033[0m"
 
 mkdir -p $HOME/.config/nvim $HOME/.config/alacritty >/dev/null 2>&1
-rm $HOME/.zshrc $HOME/.config/nvim/init.vim >/dev/null 2>&1
+rm $HOME/.zshrc $HOME/.config/nvim/init.vim $HOME/.config/alacritty/alacritty.yml >/dev/null 2>&1
 ln -s $HOME/.dotfiles/configs/zshrc $HOME/.zshrc
 echo "${GREEN}.zshrc linked: $CLEAR_COLOR$HOME/.dotfiles/configs/zshrc $GREEN-> $CLEAR_COLOR$HOME/.zshrc"
 ln -s $HOME/.dotfiles/configs/nvim.vim $HOME/.config/nvim/init.vim
