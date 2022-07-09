@@ -20,3 +20,8 @@ fi
 echo "eval \"\$($HOMEBREW_PREFIX/bin/brew shellenv)\"" >> $HOME/.zprofile
 brew install pinentry-mac gpg2
 echo "pinentry-program $HOMEBREW_PREFIX/bin/pinentry-mac" >> $HOME/.gnupg/gpg-agent.conf
+
+# install jb mono
+
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono alacritty

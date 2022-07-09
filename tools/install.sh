@@ -26,9 +26,16 @@ curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivab
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.dotfiles/oh-my-zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 2>&1
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.dotfiles/oh-my-zsh/custom/plugins/zsh-autosuggestions > /dev/null 2>&1
 
+# installing jetbrains mono
+
+if [[ $(uname) = "Linux" ]]
+then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
+fi
+
 # linking dotfiles to their original locations
 
-echo "${GREEN}Linking binaries$CLEAR_COLOR"
+echo "${GREEN}Linking dotfiles$CLEAR_COLOR"
 
 sh $HOME/.dotfiles/tools/relink.sh
 
