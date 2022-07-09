@@ -9,7 +9,7 @@ CLEAR_COLOR="\033[0m"
 
 cd $HOME/.dotfiles
 echo "1) ${GREEN}Upgrading dotfiles$CLEAR_COLOR"
-if git pull > /dev/null 2>&1
+if ! git pull > /dev/null 2>&1
 then
 	echo "$HOME/.dotfiles synced"
 else
