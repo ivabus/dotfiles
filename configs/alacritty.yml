@@ -44,7 +44,7 @@ colors:
 
 cursor:
   shape: Block
-  blinking: one
+  blinking: on
 
 shell:
   program: /bin/zsh
