@@ -23,3 +23,7 @@ sh -c "$(curl -fsSL https://ivabus.dev/dotfiles)"
 ### Upgrading dotfiles
 
 Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink old dotfiles, link new if needed and upgrade oh-my-zsh.
+
+### Announcement
+
+sway (+ stuff) dotfiles comming soon.
