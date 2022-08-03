@@ -7,3 +7,6 @@ plugins=(git zsh-syntax-highlighting)
 alias upgrade_dotfiles="sh $HOME/.dotfiles/tools/upgrade.sh"
 
 source $ZSH/oh-my-zsh.sh
+
+alias vi="nvim"
+alias vim="nvim"
