@@ -15,3 +15,4 @@ set backupdir=~/.cache/vim
 set completeopt=noinsert,menuone,noselect
 set cursorline
 set relativenumber
+
