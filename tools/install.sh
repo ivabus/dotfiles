@@ -32,6 +32,11 @@ then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 fi
 
+# installing sway-launcher
+
+curl https://raw.githubusercontent.com/Biont/sway-launcher-desktop/master/sway-launcher-desktop.sh > $HOME.dotfiles/utils/sway-launcher-desktop
+chmod +x $HOME.dotfiles/utils/sway-launcher-desktop
+
 # linking dotfiles to their original locations
 
 echo "${GREEN}Linking dotfiles$CLEAR_COLOR"

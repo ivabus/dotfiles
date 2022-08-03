@@ -8,7 +8,7 @@ Features:
 - alacritty config (solarized dark, 60x20, JetBrains Mono)
 - Jetbrains Mono installation (macOS or Linux)
 - macOS-specific configuration ([Homebrew](https://brew.sh), git gpg fixing, alacritty and JetBrains Mono installation)
-
+- sway configs (sway + waybar) (fzf required)
 During the installation you can configure git by embedded configurator:
 
  - user.name
