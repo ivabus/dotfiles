@@ -1,18 +1,9 @@
 {
     "height": 30, // Waybar height (to be removed for auto height)
-    "spacing": 0, // Gaps between modules (4px)
+    "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "keyboard-state", "sway/language", "clock", "tray"],
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
+    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "temperature", "sway/language", "clock", "tray"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -40,40 +31,17 @@
         "format": "RAM: {}%"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{temperatureC}°C",
     },
     "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
+        "format": "Bat: {capacity}%",
+        "format-charging": "Bat: {capacity}% (charging)",
+        "format-plugged": "Bat: {capacity}% (plugged)",
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "",
-        "format-ethernet": "",
-        "tooltip-format": "{ifname} via {essid} {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        // "format-alt": "{ifname} ({essid}): {ipaddr}/{cidr}"
+        "format": "Connected: {ifname}",
+        "tooltip-format": "{ifname} via {essid} {ipaddr}/{cidr}",
+        "format-linked": "Connected (No IP): {ifname}",
+        "format-disconnected": "Disconnected",
     },
 }
