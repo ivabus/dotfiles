@@ -1,10 +1,6 @@
 #!/bin/sh
 
-GREEN="\033[32m"
-RED="\033[31m"
-CLEAR_COLOR="\033[0m"
-
-echo "${GREEN}Setting up git$CLEAR_COLOR"
+echo "Setting up git"
 read -p "Enter your name for commits: " GITNAME
 git config --global user.name "$GITNAME"
 read -p "Enter your email for commits: " GITEMAIL
@@ -30,17 +26,17 @@ then
 fi
 git config --global core.editor $GITEDITOR
 
-echo "\n${RED}Git configured with:$CLEAR_COLOR"
-echo "${GREEN}user.name:       ${CLEAR_COLOR}$GITNAME"
-echo "${GREEN}user.email:      ${CLEAR_COLOR}$GITEMAIL"
-echo "${GREEN}core.editor:     ${CLEAR_COLOR}$GITEDITOR"
-echo "${GREEN}pull.rebase:     ${CLEAR_COLOR}false (merge)"
+echo "\nGit configured with:"
+echo "user.name:       $GITNAME"
+echo "user.email:      $GITEMAIL"
+echo "core.editor:     $GITEDITOR"
+echo "pull.rebase:     false (merge)"
 
 if [[ $answer = [Yy] ]] 
 then
-echo "${GREEN}commit.codesign: ${CLEAR_COLOR}true"
-echo "${GREEN}gpg.program:     ${CLEAR_COLOR}gpg2"
-echo "${GREEN}user.signingkey: ${CLEAR_COLOR}$GPGKEYID"
+echo "commit.codesign: true"
+echo "gpg.program:     gpg2"
+echo "user.signingkey: $GPGKEYID"
 else
-echo "${GREEN}commit.codesign: ${CLEAR_COLOR}false"
+echo "commit.codesign: false"
 fi

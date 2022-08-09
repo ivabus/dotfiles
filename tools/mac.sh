@@ -1,14 +1,10 @@
 #!/bin/bash
 
-GREEN="\033[32m"
-RED="\033[31m"
-CLEAR_COLOR="\033[0m"
-
 # configuring mac-only things
 
 # installing homebrew
 
-echo "${GREEN}Installing Homebrew${CLEAR_COLOR}"
+echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 if [ "$(arch)" == "arm64" ]

@@ -4,11 +4,9 @@
 # oh-my-zsh update included!
 
 CURRENTDIR="$(pwd)"
-GREEN="\033[32m"
-CLEAR_COLOR="\033[0m"
 
 cd $HOME/.dotfiles
-echo "1) ${GREEN}Upgrading dotfiles$CLEAR_COLOR"
+echo "1) Upgrading dotfiles"
 
 # ignore local changes
 
@@ -22,6 +20,6 @@ else
 	exit 1
 fi
 sh tools/relink.sh
-echo "2) ${GREEN}Upgrading oh-my-zsh$CLEAR_COLOR"
+echo "2) Upgrading oh-my-zsh"
 zsh -c "source $ZSH/oh-my-zsh.sh && omz update" > /dev/null
 cd $CURRENTDIR
