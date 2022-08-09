@@ -10,8 +10,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "0",
+            "deactivated": "O"
         }
     },
     "tray": {
@@ -19,13 +19,11 @@
         "spacing": 10
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%d.%m.%Y %H:%M:%S}",
         "interval": 1
     },
     "cpu": {
         "format": "CPU: {usage}%",
-        "tooltip": false
     },
     "memory": {
         "format": "RAM: {}%"
@@ -39,9 +37,9 @@
         "format-plugged": "Bat: {capacity}% (plugged)",
     },
     "network": {
-        "format": "Connected: {ifname}",
-        "tooltip-format": "{ifname} via {essid} {ipaddr}/{cidr}",
-        "format-linked": "Connected (No IP): {ifname}",
+        "format": "Connected via {ifname}",
+        "tooltip-format": "{ipaddr}/{cidr}",
+        "format-linked": "Connected (No IP) via {ifname}",
         "format-disconnected": "Disconnected",
     },
 }
