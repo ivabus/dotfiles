@@ -26,9 +26,8 @@ Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink o
 
 
 ## sway and waybar
-![screenshot](https://user-images.githubusercontent.com/71599788/183602504-afcfdb57-8c39-41c7-9848-aa0f4bf8ab0b.png)
 
-> (old alacritty theme on screenshot)
+![screenshot](https://user-images.githubusercontent.com/71599788/183604097-00cdab01-6b02-42a2-bdba-ecc02d346057.png)
 
 packages: `sway swaybg swaylock swayidle alacritty waybar pcmanfm-qt firefox breeze breeze-gtk fzf`
 
