@@ -37,7 +37,7 @@ aur: `sway-launcher-desktop`
 font: `JetBrains Mono`
 
 
-## All dotfile dependencies on Arch Linux
+## Install all dotfiles dependencies on Arch Linux
 
 ```sh
 pacman -S $(curl -fsSL https://ivabus.dev/pkgs)
