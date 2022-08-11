@@ -35,3 +35,10 @@ packages: `sway swaybg swaylock swayidle alacritty waybar pcmanfm-qt firefox bre
 aur: `sway-launcher-desktop`
 
 font: `JetBrains Mono`
+
+
+## All dotfile dependencies on Arch Linux
+
+```sh
+pacman -S $(curl -fsSL https://ivabus.dev/pkgs)
+```
