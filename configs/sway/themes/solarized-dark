@@ -1,0 +1,14 @@
+seat seat0 xcursor_theme "breeze_cursors"
+
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Breeze-Dark'
+    gsettings set $gnome-schema icon-theme 'breeze-dark'
+    gsettings set $gnome-schema cursor-theme 'breeze_cursors'
+    gsettings set $gnome-schema font-name 'JetBrains Mono 10'
+}
+
+# Property Name         Border  BG      Text
+client.focused          #839496 #839496 #839496
+client.focused_inactive #839496 #073642 #839496
+client.unfocused        #002b36 #073642 #839496

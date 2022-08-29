@@ -4,11 +4,11 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt
 set $menu exec $term --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
 set $filemgr pcmanfm-qt
 
-output * bg #232629 solid_color
+output * bg #002a35 solid_color
 
 input * {
 	xkb_layout us,ru
@@ -29,7 +29,7 @@ exec swayidle -w \
 
 output * scale 2
 
-include ~/.config/sway/themes/breeze-sway
+include ~/.config/sway/themes/solarized-dark
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+f exec $filemgr
@@ -54,6 +54,8 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+bindsym $mod+Next workspace next
+bindsym $mod+Prior workspace prev
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
 bindsym $mod+3 workspace number 3
