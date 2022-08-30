@@ -5,7 +5,7 @@ Features:
 - zshrc ([oh-my-zsh](https://ohmyz.sh) + [zsh-users/zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
 - [ivabus-zsh-theme](https://github.com/ivabus/ivabus-zsh-theme)
 - neovim config (no plugins)
-- alacritty config (breeze dark, 60x20, JetBrains Mono)
+- alacritty config (Solarized Dark, 60x20, JetBrains Mono)
 - Jetbrains Mono installation (macOS or Linux)
 - macOS-specific configuration ([Homebrew](https://brew.sh), git gpg fixing, alacritty)
 
