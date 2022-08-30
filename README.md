@@ -28,7 +28,7 @@ Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink o
 ## sway and waybar
 ![screenshot](https://user-images.githubusercontent.com/71599788/187368639-4b7ed27a-4f42-4cd1-83c7-0b6dd87cd37c.png)
 ![screenshotMenu](https://user-images.githubusercontent.com/71599788/187368647-ad1b7e83-3eef-4989-94c8-c5888daec814.png)
-
+https://user-images.githubusercontent.com/71599788/187483336-1cd64538-a191-47e5-8935-adfd720c6530.mp4
 
 packages: `sway swaybg swaylock swayidle alacritty waybar pcmanfm-qt firefox breeze breeze-gtk fzf`
 
