@@ -6,7 +6,7 @@ set $right l
 set $term alacritty
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt
 set $menu exec $term --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
-set $filemgr pcmanfm-qt
+set $filemgr nemo
 
 output * bg #002b36 solid_color
 
@@ -21,7 +21,7 @@ xwayland enable
 smart_borders on
 default_border pixel 2
 gaps inner 5
-font "JetBrains Mono" 9
+font "JetBrains Mono" 11
 
 exec swayidle -w \
           timeout 300 'swaylock -f -c 000000' \
@@ -38,7 +38,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag -f 'JetBrains Mono 11' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl shutdown' -B 'Reboot' 'systemctl reboot'
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
