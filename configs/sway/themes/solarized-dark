@@ -10,5 +10,5 @@ exec_always {
 
 # Property Name         Border  BG      Text
 client.focused          #839496 #839496 #839496
-client.focused_inactive #839496 #073642 #839496
-client.unfocused        #002b36 #073642 #839496
+client.focused_inactive #839496 #002b36 #839496
+client.unfocused        #002b36 #003b36 #839496

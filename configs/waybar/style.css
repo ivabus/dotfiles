@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-    background-color: #002a35;
+    background-color: #002b36;
     color: #839496;
 }
 
@@ -46,11 +46,15 @@ window#waybar {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
-    color: #839496;
-    background-color: #002a35;
+    padding: 0 5px;
+    color: #b58900;
+    background-color: #002b36;
 }
 
+#window {
+    color: #859900;
+    font-weight: 900;
+}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {

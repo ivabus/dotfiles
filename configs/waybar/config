@@ -3,7 +3,7 @@
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "temperature", "sway/language", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "temperature", "battery", "sway/language", "clock", "tray"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -19,7 +19,8 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%d.%m.%Y %H:%M:%S}",
+    "format": "{:%H:%M:%S}",
+        "format-alt": "{:%d.%m.%Y}",
         "interval": 1
     },
     "cpu": {
@@ -37,9 +38,9 @@
         "format-plugged": "Bat: {capacity}% (plugged)",
     },
     "network": {
-        "format": "Connected via {ifname}",
+        "format": "Network via {ifname}",
         "tooltip-format": "{ipaddr}/{cidr}",
-        "format-linked": "Connected (No IP) via {ifname}",
-        "format-disconnected": "Disconnected",
+        "format-linked": "Network (No IP) via {ifname}",
+        "format-disconnected": "No network",
     },
 }
