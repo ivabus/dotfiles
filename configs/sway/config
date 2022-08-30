@@ -12,33 +12,50 @@ output * bg #002b36 solid_color
 
 input * {
 	xkb_layout us,ru
-	xkb_options grp:alt_shift_toggle
+	xkb_options grp:win_space_toggle
 }
 
 bar swaybar_command waybar
 xwayland enable
 
 smart_borders on
-default_border pixel 2
+default_border pixel 1
+hide_edge_borders smart
+smart_gaps on
 gaps inner 5
-font "JetBrains Mono" 11
-
-exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+font "JetBrains Mono" 9
 
 output * scale 2
 
 include ~/.config/sway/themes/solarized-dark
 
+
+# Start components
+
+exec mako
+exec swayidle -w timeout 300 'swaylock -f -c 000000' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -c 000000'
+
+# Screenshots
+
+set $screenshot_file \"$HOME/Pictures/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').png\"
+bindsym $mod+o exec grim -s1 $screenshot_file
+bindsym $mod+p exec (slurp | grim -g- -s1 $screenshot_file)
+
+# Recordings
+
+set $rec_file \"$HOME/Videos/recording-$(date '+%Y-%m-%d_%H-%M-%S').mp4\"
+bindsym $mod+Shift+o exec wf-recorder --file $rec_file
+bindsym $mod+Shift+p exec (wf-recorder -g "$(slurp)" --file $rec_file)
+bindsym $mod+Shift+BackSpace exec killall -s SIGINT wf-recorder
+
+# Symbols bind
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+f exec $filemgr
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -f 'JetBrains Mono 11' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl shutdown' -B 'Reboot' 'systemctl reboot'
+bindsym $mod+Shift+e exec swaynag -f 'JetBrains Mono 9' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot'
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -102,3 +119,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Floating
+for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="pavucontrol"] resize set 600 300
