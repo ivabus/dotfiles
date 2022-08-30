@@ -19,15 +19,17 @@
         "spacing": 10
     },
     "clock": {
-    "format": "{:%H:%M:%S}",
+        "format": "{:%H:%M:%S}",
         "format-alt": "{:%d.%m.%Y}",
         "interval": 1
     },
     "cpu": {
         "format": "CPU: {usage}%",
+        "interval": 1
     },
     "memory": {
-        "format": "RAM: {}%"
+        "format": "RAM: {}%",
+        "interval": 1
     },
     "temperature": {
         "format": "{temperatureC}°C",
@@ -36,6 +38,7 @@
         "format": "Bat: {capacity}%",
         "format-charging": "Bat: {capacity}% (charging)",
         "format-plugged": "Bat: {capacity}% (plugged)",
+        "interval": 10
     },
     "network": {
         "format": "Network via {ifname}",
