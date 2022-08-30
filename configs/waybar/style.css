@@ -2,6 +2,7 @@
     font-family: JetBrains Mono;
     font-size: 11px;
     border: none;
+    font-weight: 400;
 }
 
 window#waybar {
@@ -53,7 +54,7 @@ window#waybar {
 
 #window {
     color: #859900;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
