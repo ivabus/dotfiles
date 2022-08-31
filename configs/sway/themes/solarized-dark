@@ -2,9 +2,9 @@ seat seat0 xcursor_theme "breeze_cursors"
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Breeze-Dark'
-    gsettings set $gnome-schema icon-theme 'breeze-dark'
-    gsettings set $gnome-schema cursor-theme 'breeze_cursors'
+    gsettings set $gnome-schema gtk-theme 'NumixSolarizedDarkGreen'
+    gsettings set $gnome-schema icon-theme 'Numix-Square'
+    gsettings set $gnome-schema cursor-theme 'Numix-Cursor'
     gsettings set $gnome-schema font-name 'JetBrains Mono 9'
 }
 

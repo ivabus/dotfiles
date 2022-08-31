@@ -1,6 +1,6 @@
 * {
     font-family: JetBrains Mono;
-    font-size: 8pt;
+    font-size: 9pt;
     border: none;
     font-weight: 400;
 }
@@ -8,6 +8,7 @@
 window#waybar {
     background-color: #002b36;
     color: #839496;
+    padding-right: 5px;
 }
 
 #workspaces button {
@@ -50,6 +51,10 @@ window#waybar {
     padding: 0 5px;
     color: #b58900;
     background-color: #002b36;
+}
+
+#idle_inhibitor {
+    padding-left: 10px;
 }
 
 #window {
