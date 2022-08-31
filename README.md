@@ -30,6 +30,10 @@ Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink o
 ![screenshotMenu](https://user-images.githubusercontent.com/71599788/187368647-ad1b7e83-3eef-4989-94c8-c5888daec814.png)
 
 
+https://user-images.githubusercontent.com/71599788/187484410-bd57e08e-8cca-4d09-9ee4-dfb6caec8dec.mp4
+
+
+
 packages: `sway swaybg swaylock swayidle alacritty waybar pcmanfm-qt firefox breeze breeze-gtk fzf`
 
 aur: `sway-launcher-desktop`
