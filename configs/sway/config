@@ -123,3 +123,9 @@ bindsym $mod+r mode "resize"
 # Floating
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="pavucontrol"] resize set 600 300
+
+# Autostart
+
+exec alacritty --class htop -e htop
+for_window [app_id="htop"] move container to workspace number 10
+for_window [app_id="htop"] fullscreen

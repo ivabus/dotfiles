@@ -5,10 +5,10 @@ exec_always {
     gsettings set $gnome-schema gtk-theme 'Breeze-Dark'
     gsettings set $gnome-schema icon-theme 'breeze-dark'
     gsettings set $gnome-schema cursor-theme 'breeze_cursors'
-    gsettings set $gnome-schema font-name 'JetBrains Mono 10'
+    gsettings set $gnome-schema font-name 'JetBrains Mono 9'
 }
 
-# Property Name         Border  BG      Text
-client.focused          #839496 #839496 #002b36
-client.focused_inactive #839496 #002b36 #002b36
-client.unfocused        #002b36 #003b36 #839496
+# Property Name         Border  BG      Text    Indicator Child_border
+client.focused          #839496 #002b36 #839496 #839496   #839496
+client.focused_inactive #002b36 #002b36 #839496 #839496   #002b36
+client.unfocused        #002b36 #002b36 #839496 #839496   #002b36

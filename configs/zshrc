@@ -10,3 +10,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi="nvim"
 alias vim="nvim"
+
+
+alias show_current_keys="wshowkeys -F \"JetBrains Mono 9\" -a left -a bottom -t 1"
