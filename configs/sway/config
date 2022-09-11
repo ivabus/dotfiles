@@ -8,7 +8,7 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 set $menu exec $term --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
 set $filemgr nemo
 
-output * bg #002b36 solid_color
+output * bg #073642 solid_color
 
 input * {
 	xkb_layout us,ru
@@ -28,7 +28,6 @@ font "JetBrains Mono" 9
 output * scale 2
 
 include ~/.config/sway/themes/solarized-dark
-
 
 # Start components
 
@@ -56,7 +55,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -f 'JetBrains Mono 9' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot'
+bindsym $mod+Shift+e exec swaynag -f 'Ubuntu 9' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot'
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -126,6 +125,6 @@ for_window [app_id="pavucontrol"] resize set 600 300
 
 # Autostart
 
-exec alacritty --class htop -e htop
-for_window [app_id="htop"] move container to workspace number 10
-for_window [app_id="htop"] fullscreen
+exec alacritty --class glances -e glances
+for_window [app_id="glances"] move container to workspace number 10
+for_window [app_id="glances"] fullscreen

@@ -3,9 +3,9 @@ set showmatch
 set hlsearch
 set incsearch
 set autoindent
-set expandtab
-set tabstop=4
-set shiftwidth=4
+set noexpandtab
+set tabstop=2
+set shiftwidth=2
 set number
 set wildmode=longest, list
 set cc=80

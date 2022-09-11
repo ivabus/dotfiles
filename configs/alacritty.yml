@@ -10,7 +10,6 @@ scrolling:
   multiplier: 3
 
 font:
-
   normal:
     family: JetBrains Mono
     style: SemiBold
@@ -22,51 +21,43 @@ font:
   italic:
     family: JetBrains Mono
     style: SemiBold Italic
-
   size: 9.0
+
+cursor:
+  shape: Block
+  blinking: on
+
 
 # Colors (Solarized Dark)
 colors:
   # Default colors
   primary:
-    background: '0x002b36'
-    foreground: '0x93a1a1'
+    background: '#002b36' # base03
+    foreground: '#839496' # base0
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
+  # Cursor colors
   cursor:
-    text: '0x002b36'
-    cursor: '0x93a1a1'
+    text:   '#002b36' # base03
+    cursor: '#839496' # base0
 
   # Normal colors
   normal:
-    black:   '0x002b36'
-    red:     '0xdc322f'
-    green:   '0x859900'
-    yellow:  '0xb58900'
-    blue:    '0x268bd2'
-    magenta: '0x6c71c4'
-    cyan:    '0x2aa198'
-    white:   '0x93a1a1'
+    black:   '#073642' # base02
+    red:     '#dc322f' # red
+    green:   '#859900' # green
+    yellow:  '#b58900' # yellow
+    blue:    '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan:    '#2aa198' # cyan
+    white:   '#eee8d5' # base2
 
   # Bright colors
   bright:
-    black:   '0x657b83'
-    red:     '0xdc322f'
-    green:   '0x859900'
-    yellow:  '0xb58900'
-    blue:    '0x268bd2'
-    magenta: '0x6c71c4'
-    cyan:    '0x2aa198'
-    white:   '0xfdf6e3'
-
-  indexed_colors:
-    - { index: 16, color: '0xcb4b16' }
-    - { index: 17, color: '0xd33682' }
-    - { index: 18, color: '0x073642' }
-    - { index: 19, color: '0x586e75' }
-    - { index: 20, color: '0x839496' }
-    - { index: 21, color: '0xeee8d5' }
-cursor:
-  shape: Block
-  blinking: on
-
+    black:   '#002b36' # base03
+    red:     '#cb4b16' # orange
+    green:   '#586e75' # base01
+    yellow:  '#657b83' # base00
+    blue:    '#839496' # base0
+    magenta: '#6c71c4' # violet
+    cyan:    '#93a1a1' # base1
+    white:   '#fdf6e3' # base3

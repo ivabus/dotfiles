@@ -4,7 +4,7 @@
 # do not run manually
 
 mkdir -p $HOME/.config/nvim $HOME/.config/alacritty $HOME/.config/mako >/dev/null 2>&1
-rm -rf $HOME/.zshrc $HOME/.config/nvim/init.vim $HOME/.config/alacritty/alacritty.yml $HOME/.config/sway $HOME/.config/waybar $HOME/.config/mako/config >/dev/null 2>&1
+rm -rf $HOME/.zshrc $HOME/.config/nvim/init.vim $HOME/.config/alacritty/alacritty.yml $HOME/.config/sway $HOME/.config/waybar $HOME/.config/mako/config  >/dev/null 2>&1
 ln -s $HOME/.dotfiles/configs/zshrc $HOME/.zshrc
 echo ".zshrc linked: $HOME/.dotfiles/configs/zshrc -> $HOME/.zshrc"
 ln -s $HOME/.dotfiles/configs/.profile $HOME/.profile
