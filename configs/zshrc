@@ -1,7 +1,7 @@
 export ZSH="$HOME/.dotfiles/oh-my-zsh"
 
 ZSH_THEME="ivabus"
-
+ENABLE_CORRECTION="true"
 plugins=(git zsh-syntax-highlighting)
 
 alias upgrade_dotfiles="sh $HOME/.dotfiles/tools/upgrade.sh"
@@ -17,11 +17,15 @@ USEDSWAP=$(free -h | grep Swap | awk '{ print $3 " / " $2}')
 USEDSTRG=$(df / -h | tail -n 1 | awk '{print $3}')
 USEDSTRGPERC=$(df / -h | tail -n 1 | awk '{print $5}')
 STRG=$(df / -h | tail -n 1 | awk '{print $2}')
+USEDSTRGHOME=$(df /home -h | tail -n 1 | awk '{print $3}')
+USEDSTRGPERCHOME=$(df /home -h | tail -n 1 | awk '{print $5}')
+STRGHOME=$(df /home -h | tail -n 1 | awk '{print $2}')
 UPTIME=$(uptime -p)
 
 printf "$fg[green]$(whoami)@$(hostnamectl hostname)$reset_color\n"
 printf "$fg[blue]system load:$reset_color\t${AVLD}\n"
-printf "$fg[blue]memory usage:$reset_color\t${USEDMEM}\n"
 printf "$fg[blue]usage of /:$reset_color\t${USEDSTRGPERC}% (${USEDSTRG}/${STRG})\n"
+printf "$fg[blue]usage of /home:$reset_color\t${USEDSTRGPERCHOME}% (${USEDSTRGHOME}/${STRGHOME})\n"
+printf "$fg[blue]memory usage:$reset_color\t${USEDMEM}\n"
 printf "$fg[blue]swap usage:$reset_color\t${USEDSWAP}\n"
 printf "$fg[blue]uptime:$reset_color\t\t${UPTIME}\n"
