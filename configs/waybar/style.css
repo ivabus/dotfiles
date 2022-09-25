@@ -7,21 +7,20 @@
 }
 
 window#waybar {
-    background-color: #002b36;
-    color: #839496;
-    padding-right: 5px;
+    background-color: #232629;
+    color: #eeeeee;
 }
 
 #workspaces button {
     background-color: transparent;
     border-radius: 2px;
-    color: #839496;
-    margin: 4px 2px;
+    color: #eeeeee;
+    margin: 2px 2px;
 }
 
 #workspaces button:hover {
     color: #cb4b16;
-    background-color: #073642;
+    background-color: #43a5d5;
 }
 
 #workspaces button.focused {
@@ -54,7 +53,7 @@ window#waybar {
     color: #b58900;
     background-color: #073642;
     border-radius: 2px;
-    margin: 4px 2px;
+    margin: 2px 2px;
 }
 
 #window {

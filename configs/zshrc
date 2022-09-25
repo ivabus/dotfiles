@@ -11,5 +11,17 @@ source $ZSH/oh-my-zsh.sh
 alias vi="nvim"
 alias vim="nvim"
 
+AVLD=$(cut -d " " -f1-3 /proc/loadavg)
+USEDMEM=$(free -h | grep Mem | awk '{print $3 " / " $2}')
+USEDSWAP=$(free -h | grep Swap | awk '{ print $3 " / " $2}')
+USEDSTRG=$(df / -h | tail -n 1 | awk '{print $3}')
+USEDSTRGPERC=$(df / -h | tail -n 1 | awk '{print $5}')
+STRG=$(df / -h | tail -n 1 | awk '{print $2}')
+UPTIME=$(uptime -p)
 
-alias show_current_keys="wshowkeys -F \"JetBrains Mono 9\" -a left -a bottom -t 1"
+printf "$fg[green]$(whoami)@$(hostnamectl hostname)$reset_color\n"
+printf "$fg[blue]system load:$reset_color\t${AVLD}\n"
+printf "$fg[blue]memory usage:$reset_color\t${USEDMEM}\n"
+printf "$fg[blue]usage of /:$reset_color\t${USEDSTRGPERC}% (${USEDSTRG}/${STRG})\n"
+printf "$fg[blue]swap usage:$reset_color\t${USEDSWAP}\n"
+printf "$fg[blue]uptime:$reset_color\t\t${UPTIME}\n"

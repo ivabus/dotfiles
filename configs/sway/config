@@ -27,7 +27,7 @@ font "JetBrains Mono" 9
 
 output * scale 2
 
-include ~/.config/sway/themes/solarized-dark
+include ~/.config/sway/themes/breeze
 
 # Start components
 
@@ -125,6 +125,6 @@ for_window [app_id="pavucontrol"] resize set 600 300
 
 # Autostart
 
-exec alacritty --class glances -e glances
-for_window [app_id="glances"] move container to workspace number 10
-for_window [app_id="glances"] fullscreen
+exec alacritty --class bottom -e btm
+for_window [app_id="bottom"] move container to workspace number 10
+for_window [app_id="bottom"] fullscreen
