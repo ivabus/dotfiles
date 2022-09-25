@@ -26,17 +26,11 @@ Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink o
 
 
 ## sway and waybar
-![screenshot](https://user-images.githubusercontent.com/71599788/187368639-4b7ed27a-4f42-4cd1-83c7-0b6dd87cd37c.png)
-![screenshotMenu](https://user-images.githubusercontent.com/71599788/187368647-ad1b7e83-3eef-4989-94c8-c5888daec814.png)
+![screenshot](https://user-images.githubusercontent.com/71599788/189524925-88d0e5e0-cff4-45c2-884a-d84d5813040f.png)
 
+packages: `sway swaybg swaylock swayidle alacritty waybar nemo firefox breeze breeze-gtk breeze-icons pulseaudio pavucontrol awesome-terminal-fonts ttf-jetbrains-mono wf-recorder slurp fzf`
 
-https://user-images.githubusercontent.com/71599788/187484410-bd57e08e-8cca-4d09-9ee4-dfb6caec8dec.mp4
-
-
-
-packages: `sway swaybg swaylock swayidle alacritty waybar pcmanfm-qt firefox breeze breeze-gtk fzf`
-
-aur: `sway-launcher-desktop`
+aur: `sway-launcher-desktop poweralertd qt5-styleplugins qt6gtk2`
 
 font: `JetBrains Mono`
 
@@ -46,3 +40,5 @@ font: `JetBrains Mono`
 ```sh
 pacman -S $(curl -fsSL https://ivabus.dev/pkgs)
 ```
+
+Then install AUR pkgs listed in https://ivabus.dev/aur
