@@ -17,7 +17,6 @@ USEDSTRGPERCHOME=$(df /home -h | tail -n 1 | awk '{print $5}')
 STRGHOME=$(df /home -h | tail -n 1 | awk '{print $2}')
 UPTIME=$(uptime -p)
 
-printf "\e[0;32m$(whoami)@$(hostnamectl hostname)\e[m\n"
 printf "\e[0;34msystem load:\e[m\t${AVLD}\n"
 printf "\e[0;34musage of /:\e[m\t${USEDSTRGPERC}% (${USEDSTRG}/${STRG})\n"
 printf "\e[0;34musage of /home:\e[m\t${USEDSTRGPERCHOME}% (${USEDSTRGHOME}/${STRGHOME})\n"

@@ -7,32 +7,30 @@
 }
 
 window#waybar {
-    background-color: #232629;
-    color: #eeeeee;
+    background-color: #1d2021;
+    color: #ebdbb2;
+    padding-right: 5px;
 }
 
 #workspaces button {
     background-color: transparent;
     border-radius: 2px;
-    color: #eeeeee;
-    margin: 2px 2px;
+    color: #a89984;
+    margin: 4px 2px;
 }
 
 #workspaces button:hover {
-    color: #cb4b16;
-    background-color: #43a5d5;
+    color: #ebdbb2;
+    background-color: #928374;
 }
 
 #workspaces button.focused {
-    color: #b58900;
-    background-color: #073642;
+    color: #ebdbb2;
+    background-color: #282828;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-#mode {
-    background-color: #888888;
+    background-color: #cc241d;
 }
 #language,
 #clock,
@@ -50,15 +48,14 @@ window#waybar {
 #idle_inhibitor,
 #mpd {
     padding: 0 4px;
-    color: #b58900;
-    background-color: #073642;
+    color: #d79921;
+    background-color: #282828;
     border-radius: 2px;
-    margin: 2px 2px;
+    margin: 4px 2px;
 }
 
 #window {
-    color: #859900;
-    font-weight: 800;
+    color: #b8bb26;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
