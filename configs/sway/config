@@ -8,7 +8,7 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 set $menu exec $term --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
 set $filemgr nemo
 
-output * bg #1d2021 solid_color
+output * bg #073642 solid_color
 
 input * {
 	xkb_layout us,ru
@@ -27,7 +27,7 @@ font "JetBrains Mono" 9
 
 output * scale 2
 
-include ~/.config/sway/themes/gruvbox
+include ~/.config/sway/themes/solarized-dark
 
 # Start components
 
@@ -119,6 +119,18 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Multimedia buttons
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86Search exec $menu
+
 # Floating
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="pavucontrol"] resize set 600 300
@@ -128,3 +140,5 @@ for_window [app_id="pavucontrol"] resize set 600 300
 exec alacritty --class bottom -e btm
 for_window [app_id="bottom"] move container to workspace number 10
 for_window [app_id="bottom"] fullscreen
+
+

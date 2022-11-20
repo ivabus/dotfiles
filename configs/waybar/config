@@ -1,9 +1,8 @@
 {
-    //"height": , // Waybar height (to be removed for auto height)
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "temperature", "battery", "sway/language", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "pulseaudio", "battery", "sway/language", "clock", "tray"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -15,7 +14,6 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {

@@ -1,61 +1,50 @@
 * {
     font-family: JetBrains Mono;
-    font-size: 8pt;
+    font-size: 6pt;
     border: none;
     font-weight: 400;
     padding: 1 1px;
 }
 
 window#waybar {
-    background-color: #1d2021;
-    color: #ebdbb2;
-    padding-right: 5px;
+    background-color: #002b36;
+    color: #839496;
 }
 
 #workspaces button {
     background-color: transparent;
     border-radius: 2px;
-    color: #a89984;
-    margin: 4px 2px;
+    color: #839496;
+    margin: 4px 1px;
 }
 
 #workspaces button:hover {
-    color: #ebdbb2;
-    background-color: #928374;
+    color: #cb4b16;
+    background-color: #073642;
 }
 
 #workspaces button.focused {
-    color: #ebdbb2;
-    background-color: #282828;
+    color: #b58900;
+    background-color: #073642;
 }
 
 #workspaces button.urgent {
-    background-color: #cc241d;
+    background-color: #eb4d4b;
 }
-#language,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd {
+#mode {
+    background-color: #888888;
+}
+#language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
     padding: 0 4px;
-    color: #d79921;
-    background-color: #282828;
+    color: #839496;
+    background-color: #073642;
     border-radius: 2px;
-    margin: 4px 2px;
+    margin: 4px 1px;
 }
 
 #window {
-    color: #b8bb26;
+    color: #b58900;
+    font-weight: 800;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -90,4 +79,5 @@ label:focus {
     padding: 0 4px;
     min-width: 16px;
 }
+
 
