@@ -33,7 +33,7 @@ include ~/.config/sway/themes/solarized-dark
 
 exec mako
 exec poweralertd
-exec swayidle -w timeout 300 'swaylock -f -c 000000' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -c 000000'
+exec swayidle -w timeout 60 'swaylock -f -c 073642' timeout 70 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -c 073642'
 
 # Screenshots
 
@@ -55,7 +55,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -f 'Ubuntu 9' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot'
+bindsym $mod+Shift+e exec swaynag -f 'JetBrains Mono 9' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' -B 'Lock screen' '$HOME/.config/sway/lock.sh'
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
