@@ -28,17 +28,4 @@ Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink o
 ## sway and waybar
 ![screenshot](https://user-images.githubusercontent.com/71599788/189524925-88d0e5e0-cff4-45c2-884a-d84d5813040f.png)
 
-packages: `sway swaybg swaylock swayidle alacritty waybar nemo firefox breeze breeze-gtk breeze-icons pulseaudio pavucontrol awesome-terminal-fonts ttf-jetbrains-mono wf-recorder slurp fzf`
-
-aur: `sway-launcher-desktop poweralertd qt5-styleplugins qt6gtk2`
-
-font: `JetBrains Mono`
-
-
-## Install all dotfiles dependencies on Arch Linux
-
-```sh
-pacman -S $(curl -fsSL https://ivabus.dev/pkgs)
-```
-
-Then install AUR pkgs listed in https://ivabus.dev/aur
+[Packages](https://ivabus.dev/pkgs), [AUR](https://ivabus.dev/aur).
