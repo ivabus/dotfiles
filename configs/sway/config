@@ -13,6 +13,7 @@ output * bg #073642 solid_color
 input * {
 	xkb_layout us,ru
 	xkb_options grp:win_space_toggle
+	xkb_variant "mac,mac"
 }
 
 bar swaybar_command waybar
