@@ -27,6 +27,7 @@ stats () {
 stats
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.profile
 export REPORTTIME=10
 alias vi="nvim"
 alias vim="nvim"
