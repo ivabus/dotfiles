@@ -10,10 +10,15 @@ set $filemgr nemo
 
 output * bg #181924 solid_color
 
-input * {
-	xkb_layout us,ru
-	xkb_options grp:win_space_toggle
-	xkb_variant "mac,mac"
+input type:keyboard {
+    xkb_layout us,ru
+    xkb_options grp:win_space_toggle
+    xkb_variant "mac,mac"
+}
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
 }
 
 bar swaybar_command waybar
