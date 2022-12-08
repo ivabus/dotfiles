@@ -25,7 +25,7 @@ sh -c "$(curl -fsSL https://ivabus.dev/dotfiles)"
 Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink old dotfiles, link new if needed and upgrade oh-my-zsh.
 
 ## screenshot
-![screenshot-2022-12-08_17-42-08](https://user-images.githubusercontent.com/71599788/206475951-602f2ce8-cd62-40d6-bd39-f8cb0e6838bd.png)
+![screenshot-2022-12-08_18-00-56](https://user-images.githubusercontent.com/71599788/206480281-149dc94e-55f2-462e-bce5-fa386930b52b.png)
 
 
 [Repo Packages](https://ivabus.dev/pkgs), [AUR packages](https://ivabus.dev/aur).
