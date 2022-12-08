@@ -57,7 +57,7 @@ button:hover {
     border-radius: 32px;
 }
 
-#language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg {
+#language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime {
     padding: 0 8px;
 }
 

@@ -2,7 +2,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["idle_inhibitor", "cpu", "temperature", "memory", "custom/loadavg", "network", "pulseaudio", "battery", "sway/language", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "cpu", "temperature", "memory", "custom/loadavg", "custom/uptime", "network", "pulseaudio", "battery", "sway/language", "clock", "tray"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -41,6 +41,12 @@
         "return-type": "{}",
         "format": "Load average: {}",
         "interval": 1
+    },
+    "custom/uptime": {
+        "exec": "uptime -p | sed 's/up //g' -",
+        "return-type": "{}",
+        "format": "Uptime: {}",
+        "interval": 60,
     },
     "temperature": {
         "format": "Temperature: {temperatureC}°C",
