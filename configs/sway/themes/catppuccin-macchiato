@@ -1,0 +1,15 @@
+seat seat0 xcursor_theme "Simp1e-Catppuccin-Macchiato"
+
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Macchiato'
+    gsettings set $gnome-schema icon-theme 'Mint-Y-Dark'
+    gsettings set $gnome-schema cursor-theme 'Simp1e-Catppuccin-Macchiato'
+    gsettings set $gnome-schema font-name 'Noto Sans 9'
+}
+
+# Property Name         Border  BG      Text    Indicator Child_border
+client.focused          #cad3f5 #24273a #cad3f5 #cad3f5   #cad3f5
+client.focused_inactive #494d64 #24273a #cad3f5 #494d64   #494d64
+client.unfocused        #363a4f #1e2030 #cad3f5 #363a4f   #363a4f
+client.urgent           #d30102 #ed8796 #cad3f5 #d30102   #d30102

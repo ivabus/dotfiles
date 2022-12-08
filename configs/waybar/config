@@ -52,5 +52,6 @@
         "tooltip-format": "{ipaddr}/{cidr}",
         "format-linked": "Network (No IP) via {ifname}",
         "format-disconnected": "No network",
+        "on-click": "GTK_THEME=Adwaita-dark iwgtk"
     },
 }

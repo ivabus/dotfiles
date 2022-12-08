@@ -9,6 +9,7 @@ exec_always {
 }
 
 # Property Name         Border  BG      Text    Indicator Child_border
-client.focused          #839496 #002b36 #839496 #839496   #839496
-client.focused_inactive #002b36 #002b36 #839496 #839496   #002b36
-client.unfocused        #002b36 #002b36 #839496 #839496   #002b36
+client.focused          #839496 #002b36 #839496 #839496   #fdf6e3
+client.focused_inactive #002b36 #002b36 #839496 #839496   #839496
+client.unfocused        #002b36 #002b36 #839496 #839496   #839496
+client.urgent           #d30102 #073642 #839496 #839496   #d30102

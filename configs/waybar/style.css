@@ -1,49 +1,50 @@
+@import "macchiato.css";
 * {
     font-family: "JetBrains Mono", "Noto Sans";
-    font-size: 6pt;
+    font-size: 9pt;
     border: none;
     font-weight: 400;
     padding: 1 1px;
 }
 
 window#waybar {
-    background-color: #002b36;
-    color: #839496;
+    background-color: @base;
+    color: @yellow;
 }
 
 #workspaces button {
     background-color: transparent;
     border-radius: 2px;
-    color: #839496;
+    color: @subtext0;
     margin: 4px 1px;
 }
 
 #workspaces button:hover {
-    color: #cb4b16;
-    background-color: #073642;
+    color: @red;
+    background-color: @surface1;
 }
 
 #workspaces button.focused {
-    color: #b58900;
-    background-color: #073642;
+    color: @yellow;
+    background-color: @mantle;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @pink;
 }
 #mode {
-    background-color: #888888;
+    background-color: @mantle;
 }
-#language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd {
+#language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd{
     padding: 0 4px;
-    color: #839496;
-    background-color: #073642;
+    color: @text;
+    background-color: @mantle;
     border-radius: 2px;
     margin: 4px 1px;
 }
 
 #window {
-    color: #b58900;
+    color: @yellow;
     font-weight: 800;
 }
 
@@ -79,5 +80,6 @@ label:focus {
     padding: 0 4px;
     min-width: 16px;
 }
+
 
 
