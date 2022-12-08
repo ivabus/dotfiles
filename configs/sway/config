@@ -8,7 +8,7 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 set $menu exec $term --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
 set $filemgr nemo
 
-output * bg ~/.config/sway/magenta_blue.png fill
+output * bg ~/.config/sway/magenta_blue.png stretch
 
 input * {
 	xkb_layout us,ru
