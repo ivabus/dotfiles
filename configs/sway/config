@@ -8,7 +8,7 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 set $menu exec $term --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
 set $filemgr nemo
 
-output * bg ~/.config/sway/magenta_blue.png stretch
+output * bg #181924 solid_color
 
 input * {
 	xkb_layout us,ru
@@ -19,10 +19,7 @@ input * {
 bar swaybar_command waybar
 xwayland enable
 
-smart_borders on
 default_border pixel 1
-hide_edge_borders smart
-smart_gaps on
 gaps inner 8
 font "JetBrains Mono" 9
 

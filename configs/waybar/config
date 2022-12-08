@@ -1,8 +1,8 @@
 {
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "pulseaudio", "battery", "sway/language", "clock", "tray"],
+    "modules-center": [],
+    "modules-right": ["idle_inhibitor", "cpu", "temperature", "memory", "custom/loadavg", "network", "pulseaudio", "battery", "sway/language", "clock", "tray"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -17,15 +17,14 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%H:%M:%S}",
-        "format-alt": "{:%d.%m.%Y}",
+        "format": "{:%H:%M:%S %d.%m.%Y}",
         "interval": 1
     },
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "Vol: {volume}%",
-        "format-bluetooth": "Vol: {volume}% ",
-        "format-bluetooth-muted": "Vol: {icon}",
+        "format": "Volume: {volume}%",
+        "format-bluetooth": "Volume: {volume}% (BT)",
+        "format-bluetooth-muted": "Volume: {icon} (BT)",
         "format-muted": "Vol: {volume}%",
         "on-click": "pavucontrol"
     },
@@ -37,14 +36,20 @@
         "format": "RAM: {}%",
         "interval": 1
     },
+    "custom/loadavg": {
+        "exec": "cat /proc/loadavg | head -c 14",
+        "return-type": "{}",
+        "format": "Load average: {}",
+        "interval": 1
+    },
     "temperature": {
-        "format": "{temperatureC}°C",
+        "format": "Temperature: {temperatureC}°C",
         "interval": 1
     },
     "battery": {
-        "format": "Bat: {capacity}%",
-        "format-charging": "Bat: {capacity}% (charging)",
-        "format-plugged": "Bat: {capacity}% (plugged)",
+        "format": "Battery: {capacity}%",
+        "format-charging": "Battery: {capacity}% (charging)",
+        "format-plugged": "Battery: {capacity}% (plugged)",
         "interval": 10
     },
     "network": {
