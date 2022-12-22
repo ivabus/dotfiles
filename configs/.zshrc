@@ -24,7 +24,6 @@ stats () {
 	printf "\e[0;34mswap usage:\e[m\t${USEDSWAP}\n"
 	printf "\e[0;34muptime:\e[m\t\t${UPTIME}\n"
 }
-stats
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.profile
@@ -33,4 +32,4 @@ alias vi="nvim"
 alias vim="nvim"
 alias upgrade_dotfiles="sh $HOME/.dotfiles/tools/upgrade.sh"
 alias timestamp='date -u +%FT%TZ'
-
+alias yt-dlp-opus="yt-dlp -f 251 -x"
