@@ -2,3 +2,4 @@
 .DS_Store
 
 oh-my-zsh
+configs/nvim/site/autoload

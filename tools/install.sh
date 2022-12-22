@@ -22,8 +22,10 @@ ZSH="$HOME/.dotfiles/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubuserconten
 curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.dotfiles/oh-my-zsh/custom/themes/ivabus.zsh-theme > /dev/null 2>&1
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.dotfiles/oh-my-zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 2>&1
 
-# installing jetbrains mono
+# installing vimplug
+curl -fLo "$HOME/.config/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# installing jetbrains mono
 if [[ $(uname) = "Linux" ]]
 then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
@@ -31,8 +33,7 @@ fi
 
 # linking dotfiles to their original locations
 
-echo "Linking dotfiles"
-
+echo "Linking dotfiles."
 sh $HOME/.dotfiles/tools/relink.sh
 
 cd $CURRENTDIR
