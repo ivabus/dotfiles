@@ -1,6 +1,6 @@
 @import "macchiato.css";
 * {
-    font-family: "JetBrains Mono", "Noto Sans";
+    font-family: "Ubuntu", "JetBrains Mono", "Noto Sans";
     font-size: 9pt;
     border: none;
     border-radius: 0;

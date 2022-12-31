@@ -2,15 +2,15 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["idle_inhibitor", "cpu", "temperature", "memory", "custom/loadavg", "custom/uptime", "network", "pulseaudio", "battery", "sway/language", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "cpu", "memory", "custom/loadavg", "custom/uptime", "network", "pulseaudio", "battery", "sway/language", "custom/absclock", "clock", "tray"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "0",
-            "deactivated": "O"
+            "activated": "No idling",
+            "deactivated": "Idling"
         }
     },
     "tray": {
@@ -34,6 +34,12 @@
     },
     "memory": {
         "format": "RAM: {}%",
+        "interval": 1
+    },
+    "custom/absclock": {
+        "exec": "date +%s",
+        "return-type": "{}",
+        "format": "{}",
         "interval": 1
     },
     "custom/loadavg": {
@@ -63,6 +69,6 @@
         "tooltip-format": "{ipaddr}/{cidr}",
         "format-linked": "Network (No IP) via {ifname}",
         "format-disconnected": "No network",
-        "on-click": "iwgtk"
+        "on-click": "nm-connection-editor"
     },
 }
