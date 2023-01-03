@@ -2,7 +2,7 @@ seat seat0 xcursor_theme "Simp1e-Catppuccin-Macchiato"
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin-Macchiato'
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Macchiato-Standard-Blue-Dark'
     gsettings set $gnome-schema icon-theme 'Mint-Y-Dark'
     gsettings set $gnome-schema cursor-theme 'Simp1e-Catppuccin-Macchiato'
     gsettings set $gnome-schema font-name 'Noto Sans 9'

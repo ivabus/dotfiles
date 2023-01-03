@@ -28,7 +28,7 @@ default_border pixel 1
 gaps inner 8
 font "JetBrains Mono" 9
 
-output * scale 1.5
+output * scale 2
 
 include ~/.config/sway/themes/catppuccin-macchiato
 
@@ -41,8 +41,8 @@ exec swayidle -w timeout 60 '$HOME/.config/sway/lock.sh'
 # Screenshots
 
 set $screenshot_file \"$HOME/Pictures/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').png\"
-bindsym $mod+o exec grim -s1 $screenshot_file
-bindsym $mod+p exec (slurp | grim -g- -s1 $screenshot_file)
+bindsym $mod+o exec grim $screenshot_file
+bindsym $mod+p exec (slurp | grim -g- $screenshot_file)
 
 # Recordings
 
