@@ -22,7 +22,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh-bin/master/ins
 PATH="$HOME/.env/bin:$PATH"
 
 echo "${ARROW} Installing tea"
-zsh -c "sh <(curl https://tea.xyz) --prefix $TEA_PREFIX --yes"
+zsh -c "sh <(curl https://tea.xyz) --prefix $TEA_PREFIX"
 
 echo "${ARROW} Installing neovim"
 $TEA +neovim.io zsh -c "exit"
