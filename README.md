@@ -18,7 +18,7 @@ During the installation you can configure git by embedded configurator:
  - code signing
 
 ```sh
-sh <(curl ivabus.dev/dotfiles)
+sh <(curl https://ivabus.dev/dotfiles)
 ```
 
 ### Upgrading dotfiles
@@ -35,5 +35,5 @@ Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink o
 TODO: description
 
 ```sh
-sh <(curl ivabus.dev/env)
+sh <(curl https://ivabus.dev/env)
 ```
