@@ -20,7 +20,7 @@ fi
 git config --global pull.rebase false
 read -p "Enter your preferred editor (default: nvim): " GITEDITOR
 
-if [ $GITEDITOR = ""]
+if [ $GITEDITOR == "" ]
 then
 	GITEDITOR="nvim"
 fi
