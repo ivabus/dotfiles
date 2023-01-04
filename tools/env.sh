@@ -30,8 +30,8 @@ echo "${ARROW} Installing htop"
 $TEA +htop.dev zsh -c "exit"
 echo "${ARROW} Installing git"
 $TEA +git-scm.org zsh -c "exit"
-
-read -p ":: Would you like to install compilers/interpretators (LLVM, Rust, Python)? (y/N): " INSTALL_COMPILERS
+printf "${INPUT}"
+read -p " Would you like to install compilers/interpretators (LLVM, Rust, Python)? (y/N): " INSTALL_COMPILERS
 if [[ $INSTALL_COMPILERS == "y" || $INSTALL_COMPILERS == "Y" ]]; then
 	echo "${ARROW} Installing rust"
 	$TEA +rust-lang.org zsh -c "exit"
@@ -41,7 +41,8 @@ if [[ $INSTALL_COMPILERS == "y" || $INSTALL_COMPILERS == "Y" ]]; then
 	$TEA +python.org zsh -c "exit"
 fi
 
-read -p ":: Would you like to install development tools (GitHub CLI, make/cmake/meson/ninja)? (y/N): " INSTALL_TOOLS
+printf "${INPUT}"
+read -p " Would you like to install development tools (GitHub CLI, make/cmake/meson/ninja)? (y/N): " INSTALL_TOOLS
 if [[ $INSTALL_TOOLS == "y" || $INSTALL_TOOLS == "Y" ]]; then
 	echo "${ARROW} Installing GitHub CLI"
 	$TEA +cli.github.com zsh -c "exit"
