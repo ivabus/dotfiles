@@ -9,7 +9,7 @@ read -p "Configure GPG signing for git? (y/N): " answer
 
 if [[ $answer = [Yy] ]]; then
 	git config --global commit.gpgsign true
-	git config --global gpg.program gpg2
+	git config --global gpg.program gpg
 	read -p "Enter your GPG key ID: " GPGKEYID
 	git config --global user.signingkey "${GPGKEYID}"
 else
@@ -20,7 +20,7 @@ fi
 git config --global pull.rebase false
 read -p "Enter your preferred editor (default: nvim): " GITEDITOR
 
-if [ $GITEDITOR = ""]
+if [ $GITEDITOR == "" ]
 then
 	GITEDITOR="nvim"
 fi
