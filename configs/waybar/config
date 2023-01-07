@@ -2,14 +2,14 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["idle_inhibitor", "cpu", "memory", "custom/loadavg", "custom/uptime", "network", "pulseaudio", "battery", "sway/language", "custom/absclock", "clock", "tray"],
+    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "custom/uptime", "network", "pulseaudio", "battery", "sway/language", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "No idling",
+            "activated": "Don't idle",
             "deactivated": "Idling"
         }
     },

@@ -33,3 +33,10 @@ alias vim="nvim"
 alias upgrade_dotfiles="sh $HOME/.dotfiles/tools/upgrade.sh"
 alias timestamp='date -u +%FT%TZ'
 alias yt-dlp-opus="yt-dlp -f 251 -x"
+
+# AsahiLinux useful aliases
+alias reload_net="sudo systemctl restart NetworkManager wpa_supplicant" # iwd"
+
+
+
+add-zsh-hook -Uz chpwd(){ source <(tea -Eds) }  #tea

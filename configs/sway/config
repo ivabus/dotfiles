@@ -5,10 +5,10 @@ set $up k
 set $right l
 set $term alacritty
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt
-set $menu exec $term --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
+set $menu exec $term --option window.opacity=1 --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
 set $filemgr nemo
 
-output * bg #181924 solid_color
+output * bg ~/Pictures/bg/bg.png fill
 
 input type:keyboard {
     xkb_layout us,ru
@@ -135,6 +135,19 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec $menu
+
+# Trackpad gestures
+
+bindgesture swipe:3:right workspace next
+bindgesture swipe:3:left workspace prev
+
+bindgesture swipe:4:up move up
+bindgesture swipe:4:down move down
+bindgesture swipe:4:left move left
+bindgesture swipe:4:right move right
+
+bindgesture pinch:4:inward exec $menu # launchpad like
+
 
 # Floating
 for_window [app_id="pavucontrol"] floating enable, resize 600 300, move absolute position 25ppt 25ppt
