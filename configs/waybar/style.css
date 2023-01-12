@@ -10,7 +10,7 @@
 
 window#waybar {
     color: transparent;
-    background: @base;
+    background: transparent;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 8px;
@@ -18,10 +18,15 @@ window#waybar {
 
 #workspaces {
     transition: none;
+    background: #1d2021;
+    margin: 8px 8px 0;
+    padding: 4px;
     color: @text;
+    border-radius: 32px;
 }
 
 #workspaces button {
+    border-radius: 32px;
 }
 
 button:hover {
@@ -43,10 +48,11 @@ button:hover {
 
 .modules-right {
     transition: none;
-    background: @base;
+    background: #1d2021;
+    border-radius: 32px;
+    margin: 8px 8px 0;
     color: @text;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding: 4px;
 }
 
 #language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime {
