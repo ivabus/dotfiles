@@ -1,0 +1,14 @@
+seat seat0 xcursor_theme "Breeze_Snow"
+
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
+    gsettings set $gnome-schema icon-theme 'Adwaita'
+    gsettings set $gnome-schema cursor-theme 'Breeze_Snow'
+    gsettings set $gnome-schema font-name 'JetBrains Mono 9'
+}
+
+# Property Name         Border  BG      Text    Indicator Child_border
+client.focused          #928374 #282828 #ebdbb2 #928374   #928374
+client.focused_inactive #1d2021 #282828 #ebdbb2 #1d2021   #1d2021
+client.unfocused        #1d2021 #282828 #ebdbb2 #1d2021   #1d2021
