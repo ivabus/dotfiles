@@ -2,7 +2,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "custom/uptime", "network", "pulseaudio", "battery", "sway/language", "clock"],
+    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "custom/uptime", "pulseaudio", "battery", "sway/language", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },

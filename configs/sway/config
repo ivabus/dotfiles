@@ -18,6 +18,7 @@ input type:keyboard {
 
 input type:touchpad {
     tap enabled
+    dwt disabled
     natural_scroll enabled
 }
 
@@ -151,7 +152,7 @@ bindgesture pinch:4:inward exec $menu # launchpad like
 
 # Floating
 for_window [app_id="pavucontrol"] floating enable, resize 600 300, move absolute position 25ppt 25ppt
-for_window [app_id="iwgtk"] floating enable, resize 300 150, move absolute position 25ppt 25ppt
+for_window [app_id="nm-connection-editor"] floating enable, resize 300 150, move absolute position 25ppt 25ppt
 
 # Autostart
 exec alacritty --class bottom -e btm

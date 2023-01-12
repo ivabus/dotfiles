@@ -10,25 +10,18 @@
 
 window#waybar {
     color: transparent;
-    background: none;
+    background: @base;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 8px;
-    border-radius: 32px;
 }
 
-
-
 #workspaces {
-    background: @base;
     transition: none;
-    border-radius: 32px;
-    color: @subtext0;
-    margin: 8px 8px 0;
+    color: @text;
 }
 
 #workspaces button {
-    border-radius: 32px;
 }
 
 button:hover {
@@ -52,10 +45,8 @@ button:hover {
     transition: none;
     background: @base;
     color: @text;
-    margin: 8px 8px 0;
     padding-left: 4px;
     padding-right: 4px;
-    border-radius: 32px;
 }
 
 #language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime {
@@ -82,4 +73,3 @@ label:focus {
     padding: 0 4px;
     min-width: 16px;
 }
-
