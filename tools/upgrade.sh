@@ -6,7 +6,7 @@ set -e
 CURRENTDIR="$(pwd)"
 
 cd $HOME/.dotfiles
-echo "1) Upgrading dotfiles"
+echo "Upgrading dotfiles"
 
 # ignore local changes
 
@@ -20,6 +20,4 @@ else
 	exit 1
 fi
 sh tools/relink.sh
-echo "2) Upgrading oh-my-zsh"
-zsh -c "source $ZSH/oh-my-zsh.sh && omz update" > /dev/null
 cd $CURRENTDIR
