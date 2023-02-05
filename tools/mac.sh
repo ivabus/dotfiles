@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 # configuring mac-only things
 
 # installing homebrew

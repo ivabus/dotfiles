@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 echo "Setting up git"
 read -p "Enter your name for commits: " GITNAME

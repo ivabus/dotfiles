@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 echo "Reinstalling dotfiles"
 echo "To proceed press enter"
 read A

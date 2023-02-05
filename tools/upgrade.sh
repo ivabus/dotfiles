@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 # Dotfiles upgrade script that just pulls new dotfiles from repo
 # oh-my-zsh update included!
 

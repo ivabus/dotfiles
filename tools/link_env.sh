@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 echo "=> Linking zshrc"
 if [ -f ~/.zshrc ]; then
 	echo "=> Moving old zshrc to ~/.zshrc.old"

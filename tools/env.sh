@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 NC='\033[0m'
 Green='\033[1;32m'
 ARROW="${Green}=>${NC}"

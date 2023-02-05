@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 # script that (re)links all dotfiles during the installation or upgrade.
 # do not run manually
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 CURRENTDIR="$(pwd)"
 
 echo "Welcome to ivabus .dotfiles installer"
@@ -15,16 +15,14 @@ then
     echo "Aborting."
     exit 255
 fi
-
-# install oh-my-zsh and plugins
-echo "Installing oh-my-zsh and plugins"
-ZSH="$HOME/.dotfiles/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
-curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.dotfiles/oh-my-zsh/custom/themes/ivabus.zsh-theme > /dev/null 2>&1
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.dotfiles/oh-my-zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 2>&1
+mkdir -p $HOME/.dotfiles/zsh/{plugins,themes}
+ZSH="$HOME/.dotfiles/zsh"
+echo "Installing zsh theme and plugins"
+curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.dotfiles/zsh/themes/ivabus.zsh-theme > /dev/null 2>&1
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.dotfiles/zsh/plugins/zsh-syntax-highlighting > /dev/null 2>&1
 
 # installing vimplug
-curl -fLo "$HOME/.config/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # installing jetbrains mono
 if [[ $(uname) = "Linux" ]]
 then
