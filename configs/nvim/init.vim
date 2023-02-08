@@ -15,3 +15,11 @@ set backupdir=~/.cache/vim
 set completeopt=noinsert,menuone,noselect
 set cursorline
 set relativenumber
+
+call plug#begin()
+
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
+call plug#end()
+
+colorscheme catppuccin-macchiato
