@@ -19,12 +19,18 @@ bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt HIST_NO_STORE
 
 REPORTTIME=3
 
-autoload -Uz compinit promptinit
+autoload -Uz compinit bracketed-paste-magic url-quote-magic
 compinit
-promptinit
+zle -N bracketed-paste bracketed-paste-magic
+zle -N self-insert url-quote-magic
 zstyle ':completion:*' menu select
 
 # Source section
@@ -43,6 +49,7 @@ alias upgrade_dotfiles="sh $HOME/.dotfiles/tools/upgrade.sh"
 alias timestamp='date -u +%FT%TZ'
 alias yt-dlp-opus="yt-dlp -f 251 -x"
 alias ffmpeg_hard="ffmpeg -hwaccel videotoolbox -c:v h264_videotoolbox"
+alias ltcp="cp ~/.dotfiles/latex_template/{macros,preamble,template,letterfonts}.tex ."
 
 # AsahiLinux useful aliases
 alias reload_net="sudo systemctl restart NetworkManager wpa_supplicant" # iwd"
