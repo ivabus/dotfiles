@@ -6,7 +6,6 @@ autoload -Uz add-zsh-hook
 function reset_broken_terminal () {
     printf '%b' '\e[0m\e(B\e)0\017\e[?5l\e7\e[0;0r\e8'
 }
-add-zsh-hook -Uz precmd reset_broken_terminal
 
 export ZSH="$HOME/.dotfiles/zsh"
 
@@ -48,8 +47,15 @@ alias la="ls -la"
 alias upgrade_dotfiles="sh $HOME/.dotfiles/tools/upgrade.sh"
 alias timestamp='date -u +%FT%TZ'
 alias yt-dlp-opus="yt-dlp -f 251 -x"
-alias ffmpeg_hard="ffmpeg -hwaccel videotoolbox -c:v h264_videotoolbox"
 alias ltcp="cp ~/.dotfiles/latex_template/{macros,preamble,template,letterfonts}.tex ."
+
+# ffmpeg section
+
+# Usage: ffmpeg_convert <output codec (hevc or h264)> <video_in> <video_out> [<quality (1 to 100)>] 
+
+ffmpeg_convert() {
+    ffmpeg -i $2 -c:v ${1}_videotoolbox $(if [ ! -z $4 ]; then echo "-q:v $4"; fi ) $3
+}
 
 # AsahiLinux useful aliases
 alias reload_net="sudo systemctl restart NetworkManager wpa_supplicant" # iwd"
@@ -57,3 +63,6 @@ alias reload_net="sudo systemctl restart NetworkManager wpa_supplicant" # iwd"
 # Diskutil aliases
 alias dadc="diskutil apfs deleteContainer"
 alias devff="diskutil eraseVolume free free"
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.3 # run chruby to see actual version

@@ -23,3 +23,6 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
 colorscheme catppuccin-macchiato
+
+autocmd BufWritePost *.tex silent! execute "!pdflatex % >/dev/null 2>&1" | redraw!
+
