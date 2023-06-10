@@ -1,8 +1,9 @@
 {
+    "height": 32,
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "custom/uptime", "pulseaudio", "battery", "sway/language", "clock"],
+    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "wireplumber", "battery", "sway/language", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -17,15 +18,13 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%H:%M:%S %d.%m.%Y}",
+        "format": "{:%H:%M:%S %Y-%m-%d}",
         "interval": 1
     },
-    "pulseaudio": {
+    "wireplumber": {
         "scroll-step": 1,
-        "format": "Volume: {volume}%",
-        "format-bluetooth": "Volume: {volume}% (BT)",
-        "format-bluetooth-muted": "Volume: {icon} (BT)",
-        "format-muted": "Vol: {volume}%",
+        "format": "Vol: {volume}%",
+        "format-muted": "Vol: muted",
         "on-click": "pavucontrol"
     },
     "cpu": {

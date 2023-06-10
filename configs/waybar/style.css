@@ -1,9 +1,8 @@
 @import "macchiato.css";
 * {
-    font-family: "Ubuntu", "JetBrains Mono", "Noto Sans";
-    font-size: 9pt;
+    font-family: "JetBrains Mono", "Noto Sans";
+    font-size: 6pt;
     border: none;
-    border-radius: 0;
     font-weight: 400;
     padding: 1px 1px;
 }
@@ -11,18 +10,12 @@
 window#waybar {
     color: transparent;
     background: @base;
+    opacity: 0.75;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 8px;
 }
 
-#workspaces {
-    transition: none;
-    color: @text;
-}
-
-#workspaces button {
-}
 
 button:hover {
     color: @red;
@@ -39,18 +32,25 @@ button:hover {
 }
 #mode {
     background-color: @mantle;
+    color: @text;
 }
 
+.modules-left {
+    padding-left: 4px;
+    border-radius: 8px;
+}
 .modules-right {
     transition: none;
     background: @base;
     color: @text;
-    padding-left: 4px;
     padding-right: 4px;
 }
 
-#language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime {
-    padding: 0 8px;
+#worspaces, #language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime, #wireplumber {
+    padding: 0 4px;
+    margin: 2 1px;
+    background-color: @mantle;
+    border-radius: 8px;
 }
 
 #window {

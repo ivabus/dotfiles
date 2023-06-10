@@ -44,10 +44,12 @@ alias vi="nvim"
 alias vim="nvim"
 alias ls="ls --color=always"
 alias la="ls -la"
+alias rh="rehash"
 alias upgrade_dotfiles="sh $HOME/.dotfiles/tools/upgrade.sh"
 alias timestamp='date -u +%FT%TZ'
 alias yt-dlp-opus="yt-dlp -f 251 -x"
 alias ltcp="cp ~/.dotfiles/latex_template/{macros,preamble,template,letterfonts}.tex ."
+alias jekyll_export="jekyll b -d ./_archive && cd _archive && tar cf ../site.tar ./ && cd .. && gzip -9 -f site.tar && rm -rf _archive"
 
 # ffmpeg section
 
@@ -57,12 +59,22 @@ ffmpeg_convert() {
     ffmpeg -i $2 -c:v ${1}_videotoolbox $(if [ ! -z $4 ]; then echo "-q:v $4"; fi ) $3
 }
 
+# Usage: ffmpeg_telegram_video_sticker: <video_in> <time <= 3> [<chromakey color in hex>] [<chromakey similarity>]
+ffmpeg_telegram_video_sticker() {
+    PWD_START=$(pwd)
+    TMPDIR=/tmp/sticker-$(date +%Y-%m-%d-%H:%M:%S)
+    mkdir $TMPDIR
+    cp $1 $TMPDIR/
+    cd $TMPDIR
+    ffmpeg -i $1 $(if [[ ! -z $3 && ! -z $4 ]]; then echo -vf "chromakey=\#$3:$4:0"; fi) -c copy -c:v png -t $2 tmp.mov
+    ffmpeg -y -i tmp.mov -r 30 -t $2 -an -c:v libvpx-vp9 -pix_fmt yuva420p -vf 'scale=512:512:force_original_aspect_ratio=decrease' -b:v 400K ${1}_sticker.webm
+    cp ${1}_sticker.webm $PWD_START/
+    cd $PWD_START
+    #rm -rf $TMP_DIR
+}
 # AsahiLinux useful aliases
 alias reload_net="sudo systemctl restart NetworkManager wpa_supplicant" # iwd"
 
 # Diskutil aliases
 alias dadc="diskutil apfs deleteContainer"
 alias devff="diskutil eraseVolume free free"
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3 # run chruby to see actual version

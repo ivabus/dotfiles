@@ -8,7 +8,7 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 set $menu exec $term --option window.opacity=1 --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
 set $filemgr nemo
 
-output * bg ~/Pictures/bg/bg.png fill
+output * bg ~/Pictures/bg/sonoma.jpg fill
 
 input type:keyboard {
     xkb_layout us,ru
@@ -20,6 +20,10 @@ input type:touchpad {
     tap enabled
     dwt disabled
     natural_scroll enabled
+}
+
+input "1452:849:Apple_MTP_multi-touch" {
+    scroll_factor 0.25
 }
 
 bar swaybar_command waybar
@@ -48,8 +52,8 @@ bindsym $mod+p exec (slurp | grim -g- $screenshot_file)
 # Recordings
 
 set $rec_file \"$HOME/Videos/recording-$(date '+%Y-%m-%d_%H-%M-%S').mp4\"
-bindsym $mod+Shift+o exec wf-recorder --file $rec_file
-bindsym $mod+Shift+p exec (wf-recorder -g "$(slurp)" --file $rec_file)
+bindsym $mod+Shift+o exec wf-recorder -a --file $rec_file
+bindsym $mod+Shift+p exec (wf-recorder -a -g "$(slurp)" --file $rec_file)
 bindsym $mod+Shift+BackSpace exec killall -s SIGINT wf-recorder
 
 # Symbols bind
@@ -139,8 +143,8 @@ bindsym XF86Search exec $menu
 
 # Trackpad gestures
 
-bindgesture swipe:3:right workspace next
-bindgesture swipe:3:left workspace prev
+bindgesture swipe:3:right workspace prev
+bindgesture swipe:3:left workspace next
 
 bindgesture swipe:4:up move up
 bindgesture swipe:4:down move down
@@ -149,6 +153,9 @@ bindgesture swipe:4:right move right
 
 bindgesture pinch:4:inward exec $menu # launchpad like
 
+# Lid binds
+
+bindswitch lid:on exec $HOME/.config/sway/lock.sh
 
 # Floating
 for_window [app_id="pavucontrol"] floating enable, resize 600 300, move absolute position 25ppt 25ppt
@@ -157,7 +164,6 @@ for_window [app_id="nm-connection-editor"] floating enable, resize 300 150, move
 # Autostart
 exec alacritty --class bottom -e btm
 for_window [app_id="bottom"] move container to workspace number 10
-for_window [app_id="bottom"] fullscreen
 exec keepassxc
 for_window [class="KeePassXC"] move container to workspace 9
 
