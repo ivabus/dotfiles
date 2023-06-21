@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 if ! command -v git &> /dev/null
 then
@@ -6,4 +7,4 @@ then
 	exit 255
 fi
 git clone https://github.com/ivabus/ivabus-dotfiles $HOME/.dotfiles
-exec sh $HOME/.dotfiles/tools/install.sh
+exec sh $HOME/.dotfiles/tools/install.sh < /dev/tty
