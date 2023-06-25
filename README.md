@@ -18,7 +18,7 @@ During the installation you can configure git by embedded configurator:
  - code signing
 
 ```sh
-sh <(curl https://ivabus.dev/dotfiles)
+curl iva.bz/d | sh
 ```
 
 ### Upgrading dotfiles
