@@ -35,5 +35,5 @@ Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink o
 TODO: description
 
 ```sh
-sh <(curl https://ivabus.dev/env)
+curl iva.bz/e | sh
 ```
