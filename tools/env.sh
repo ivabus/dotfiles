@@ -4,14 +4,31 @@ NC='\033[0m'
 Green='\033[1;32m'
 ARROW="${Green}=>${NC}"
 INPUT="${Green}::${NC}"
+INSTALL_BIN_TOOLS="0"
+HW_TARGET=$(uname)/$(uname -m)
 
-echo "${ARROW} This script will create small environment"
-echo "   with dotfiles from ivabus/ivabus-dotfiles"
+case $HW_TARGET in
+Darwin/arm64)
+	INSTALL_BIN_TOOLS="1";;
+Darwin/x86_64)
+	INSTALL_BIN_TOOLS="1";;
+Linux/arm64|Linux/aarch64)
+	INSTALL_BIN_TOOLS="1";;
+Linux/x86_64)
+	INSTALL_BIN_TOOLS="1";;
+*)
+	INSTALL_BIN_TOOLS="0"
+esac
+
+echo "${ARROW} This script will create environment"
+echo "   with dotfiles from ivabus/dotfiles"
 echo "${INPUT} Press enter to continue"
 read
 
+if [ $INSTALL_BIN_TOOLS = "1" ]
+then
 echo "${ARROW} Installing env to ~/.env"
-mkdir -p ~/.env/bin > /dev/null 2>&1
+mkdir ~/.env ~/.env/bin > /dev/null 2>&1
 
 TEA_PREFIX=~/.env/tea
 TEA=~/.env/tea/tea.xyz/v0/bin/tea
@@ -22,7 +39,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh-bin/master/ins
 PATH="$HOME/.env/bin:$PATH"
 
 echo "${ARROW} Installing tea"
-zsh -c "sh <(curl https://tea.xyz) --prefix $TEA_PREFIX"
+zsh -c "sh <(curl https://tea.xyz) -y --prefix $TEA_PREFIX"
 
 echo "${ARROW} Installing neovim"
 $TEA +neovim.io zsh -c "exit"
@@ -60,13 +77,18 @@ do
 	ln -s $TEA ~/.env/bin/$i
 done
 
+fi
+
 echo "${ARROW} Installing dotfiles"
-git clone https://github.com/ivabus/ivabus-dotfiles ~/.env/dotfiles
+$TEA git clone https://github.com/ivabus/dotfiles ~/.env/dotfiles
 ZSH="$HOME/.env/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
 curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.env/oh-my-zsh/custom/themes/ivabus.zsh-theme > /dev/null 2>&1
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.env/oh-my-zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 2>&1
 sh ~/.env/dotfiles/tools/link_env.sh
 
 echo "${ARROW} Environment installed to ~/.env"
+if [ $INSTALL_BIN_TOOLS = "1" ]
+then
 echo "   To start environment just type:"
 echo "   PATH=\"\$HOME/.env/bin:\$PATH\" zsh"
+fi

@@ -5,5 +5,5 @@ then
 	echo "git should be installed"
 	exit 255
 fi
-git clone https://github.com/ivabus/ivabus-dotfiles $HOME/.dotfiles
-exec sh $HOME/.dotfiles/tools/install.sh
+git clone https://github.com/ivabus/dotfiles $HOME/.dotfiles
+exec sh $HOME/.dotfiles/tools/install.sh < /dev/tty
