@@ -7,7 +7,7 @@ function reset_broken_terminal () {
     printf '%b' '\e[0m\e(B\e)0\017\e[?5l\e7\e[0;0r\e8'
 }
 
-export ZSH="$HOME/.dotfiles/zsh"
+export ZSH="$HOME/.env/dotfiles/zsh"
 
 # Setup history
 

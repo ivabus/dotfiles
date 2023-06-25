@@ -83,9 +83,9 @@ fi
 
 echo "${ARROW} Installing dotfiles"
 $TEA git clone https://github.com/ivabus/dotfiles $HOME/.env/dotfiles
-ZSH="$HOME/.env/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
-curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.env/oh-my-zsh/custom/themes/ivabus.zsh-theme > /dev/null 2>&1
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.env/oh-my-zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 2>&1
+mkdir -p $HOME/.env/dotfiles/zsh/plugins $HOME/.env/dotfiles/zsh/themes
+curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.env/dotfiles/zsh/custom/themes/ivabus.zsh-theme > /dev/null 2>&1
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.env/dotfiles/zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 2>&1
 sh $HOME/.env/dotfiles/tools/link_env.sh
 
 echo "${ARROW} Environment installed to $HOME/.env"
