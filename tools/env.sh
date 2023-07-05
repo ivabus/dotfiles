@@ -71,7 +71,9 @@ TEA=$HOME/.env/tea/tea.xyz/v0/bin/tea
 PATH=$PATH
 
 $TEA_GUM format "Installing \`tea\` to \`$TEA_PREFIX\`"
-bash -c "sh <(curl https://tea.xyz) --yes --prefix $TEA_PREFIX"
+
+curl https://tea.xyz -o /tmp/tea 2&1> /dev/null
+sh /tmp/tea --yes --prefix $TEA_PREFIX
 
 $TEA_GUM format "Installing \`zsh\`"
 $TEA +zsh.sourceforge.io sh -c "exit"
