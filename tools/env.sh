@@ -116,12 +116,11 @@ do
 	ln -s $TEA $HOME/.env/bin/$i
 done
 
-
-$TEA_GUM format "Installing dotfiles"
-$TEA git clone https://github.com/ivabus/dotfiles $HOME/.env/dotfiles
+$TEA_GUM format "Configuring"
+$TEA_GUM spin --title "Cloning ivabus/dotfiles" $TEA git clone https://github.com/ivabus/dotfiles $HOME/.env/dotfiles> /dev/null
 mkdir -p $HOME/.env/dotfiles/zsh/plugins $HOME/.env/dotfiles/zsh/themes
 curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.env/dotfiles/zsh/themes/ivabus.zsh-theme > /dev/null 2>&1
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.env/dotfiles/zsh/plugins/zsh-syntax-highlighting > /dev/null 2>&1
+$TEA_GUM spin $TEA git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.env/dotfiles/zsh/plugins/zsh-syntax-highlighting --title "Cloning zsh-syntax-highlighting"> /dev/null
 sh $HOME/.env/dotfiles/tools/link_env.sh
 
 $TEA_GUM format -- <<EoMD
