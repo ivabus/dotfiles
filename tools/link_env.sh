@@ -1,16 +1,15 @@
 #!/bin/sh
 set -e
 
-NC='\033[0m'
-Green='\033[1;32m'
-ARROW="${Green}=>${NC}"
+TEA_GUM="$HOME/.env/tea/charm.sh/gum/v0.9.0/bin/gum"
 
-echo "$ARROW Linking zshrc"
-if [ -f ~/.zshrc ]; then
-	echo "=> Moving old zshrc to ~/.zshrc.old"
-	mv ~/.zshrc ~/.zshrc.old
+$TEA_GUM format "Linking \`.zshrc\`"
+if [ -f $HOME/.zshrc ]; then
+	$TEA_GUM format "Moved old \`.zshrc\` to \`$HOME/.zshrc.old\`"
+	mv $HOME/.zshrc $HOME/.zshrc.old
 fi
-ln -s ~/.env/dotfiles/env/.zshrc ~/.zshrc
-echo "$ARROW Linking neovim files"
-rm -rf ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
-ln -s ~/.env/dotfiles/nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
+ln -s $HOME/.env/dotfiles/env/.zshrc $HOME/.zshrc
+$TEA_GUM "Linking neovim files"
+rm -rf $HOME/.config/nvim
+mkdir -p $HOME/.config/nvim
+ln -s $HOME/.env/dotfiles/nvim $HOME/.config/nvim
