@@ -17,12 +17,13 @@ Linux/x86_64)
 esac
 
 if command -v gum >/dev/null; then
-	TEA_GUM=gum
+	TEA_GUM=`which gum`
 else
 	curl https://tea.xyz -o /tmp/tea
 	TEA_GUM=$(sh /tmp/tea --silent +charm.sh/gum which gum | tail -n 1)
 fi
 
+echo $TEA_GUM > /tmp/gum
 
 $TEA_GUM format -- <<EoMD
 # hi, let's setup env.
@@ -36,6 +37,7 @@ $TEA_GUM format -- <<EoMD
 * htop
 * git
 * zsh
+* gum
 
 ## What could be additionally installed
 
@@ -86,6 +88,8 @@ $TEA_GUM format "Installing \`htop\`"
 $TEA +htop.dev sh -c "exit"
 $TEA_GUM format "Installing \`git\`"
 $TEA +git-scm.org sh -c "exit"
+$TEA_GUM format "Installing \`gum\`"
+$TEA +charm.sh/gum sh -c "exit"
 
 if $TEA_GUM confirm "Would you like to install compilers/interpretators (LLVM, Rust, Python)?"; then
 	$TEA_GUM format "Installing \`rust\` and \`cargo\`"
