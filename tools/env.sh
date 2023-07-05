@@ -125,5 +125,5 @@ sh $HOME/.env/dotfiles/tools/link_env.sh
 $TEA_GUM format -- <<EoMD
 Environment installed to \`$HOME/.env\`
 To start environment just type:
-\`PATH=\"\$HOME/.env/bin:\$PATH\" zsh\`
+\`PATH="\$HOME/.env/bin:\$PATH" zsh\`
 EoMD
