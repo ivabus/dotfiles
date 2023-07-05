@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-TEA_GUM="$HOME/.env/tea/charm.sh/gum/v0.9.0/bin/gum"
+TEA_GUM=$(cat /tmp/gum)
 
 $TEA_GUM format "Linking \`.zshrc\`"
 if [ -f $HOME/.zshrc ]; then
