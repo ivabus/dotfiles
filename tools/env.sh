@@ -61,7 +61,7 @@ if ! $TEA_GUM confirm "Do you want to continue"; then
 exit 1
 fi
 
-rm -rf $HOME/.env &> /dev/null
+rm -rf $HOME/.env > /dev/null 2>&1
 
 $TEA_GUM format "Installing env to \`$HOME/.env\`"
 mkdir $HOME/.env $HOME/.env/bin > /dev/null 2>&1
@@ -72,7 +72,7 @@ PATH=$PATH
 
 $TEA_GUM format "Installing \`tea\` to \`$TEA_PREFIX\`"
 
-curl https://tea.xyz -o /tmp/tea 2&1> /dev/null
+curl https://tea.xyz -o /tmp/tea > /dev/null 2>&1
 sh /tmp/tea --yes --prefix $TEA_PREFIX
 
 $TEA_GUM format "Installing \`zsh\`"
