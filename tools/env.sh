@@ -20,7 +20,7 @@ if command -v gum >/dev/null; then
 	TEA_GUM=gum
 else
 	curl https://tea.xyz -o /tmp/tea
-	TEA_GUM=$(sh /tmp/tea --silent +charm.sh/gum which gum)
+	TEA_GUM=$(sh /tmp/tea --silent +charm.sh/gum which gum | tail -n 1)
 fi
 
 
