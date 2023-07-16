@@ -5,7 +5,7 @@ set $up k
 set $right l
 set $term alacritty
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt
-set $menu exec $term --option window.opacity=1 --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
+set $menu exec $term --option window.opacity=1 --class=launcher -e env zsh -c "source ~/.profile && sway-launcher-desktop"
 set $filemgr nemo
 
 output * bg ~/Pictures/bg/sonoma.jpg fill
