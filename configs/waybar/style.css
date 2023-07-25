@@ -1,7 +1,7 @@
 @import "macchiato.css";
 * {
     font-family: "JetBrains Mono", "Noto Sans";
-    font-size: 6pt;
+    font-size: 9pt;
     border: none;
     font-weight: 400;
     padding: 1px 1px;
@@ -16,6 +16,9 @@ window#waybar {
     margin-top: 8px;
 }
 
+#workspaces button {
+    color: @text;
+}
 
 button:hover {
     color: @red;
@@ -38,6 +41,7 @@ button:hover {
 .modules-left {
     padding-left: 4px;
     border-radius: 8px;
+    color: @text;
 }
 .modules-right {
     transition: none;

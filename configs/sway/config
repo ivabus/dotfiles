@@ -5,10 +5,10 @@ set $up k
 set $right l
 set $term alacritty
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt
-set $menu exec $term --option window.opacity=1 --class=launcher -e env zsh -c "source ~/.profile && /usr/bin/sway-launcher-desktop"
+set $menu exec $term --option window.opacity=1 --class=launcher -e env zsh -c "source ~/.profile && sway-launcher-desktop"
 set $filemgr nemo
 
-output * bg ~/Pictures/bg/sonoma.jpg fill
+output * bg ~/Pictures/bg/sonoma.jpeg fill
 
 input type:keyboard {
     xkb_layout us,ru
@@ -33,7 +33,7 @@ default_border pixel 1
 gaps inner 8
 font "JetBrains Mono" 9
 
-output * scale 2
+# output * scale 2
 
 include ~/.config/sway/themes/catppuccin-macchiato
 

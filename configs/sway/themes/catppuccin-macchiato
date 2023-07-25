@@ -2,8 +2,8 @@ seat seat0 xcursor_theme "Catppuccin-Macchiato-Dark-Cursors"
 
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Catppuccin-Macchiato-Standard-Blue-Dark'
-    gsettings set $gnome-schema icon-theme 'Mint-Y-Dark'
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Macchiato-Standard-Blue-dark'
+    gsettings set $gnome-schema icon-theme 'Mint-Y-Blue'
     gsettings set $gnome-schema cursor-theme 'Catppuccin-Macchiato-Dark-Cursors'
     gsettings set $gnome-schema font-name 'Ubuntu 9'
 }
