@@ -27,11 +27,11 @@ button:hover {
 
 #workspaces button.focused {
     color: @yellow;
-    background-color: @mantle;
+    background-color: @crust;
 }
 
 #workspaces button.urgent {
-    background-color: @pink;
+    background-color: @overlay1;
 }
 #mode {
     background-color: @mantle;
@@ -50,7 +50,14 @@ button:hover {
     padding-right: 4px;
 }
 
-#worspaces, #language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime, #wireplumber {
+#workspaces {
+    padding: 0;
+    margin: 2 1px;
+    background-color: @mantle;
+    border-radius: 8px;
+}
+
+#language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime, #wireplumber {
     padding: 0 4px;
     margin: 2 1px;
     background-color: @mantle;

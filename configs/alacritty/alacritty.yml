@@ -22,7 +22,7 @@ font:
   italic:
     family: JetBrains Mono
     style: SemiBold Italic
-  size: 11.0
+  size: 9.0
 
 cursor:
   shape: Block
