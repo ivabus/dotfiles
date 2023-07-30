@@ -26,6 +26,7 @@ input "1452:849:Apple_MTP_multi-touch" {
     scroll_factor 0.25
 }
 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 bar swaybar_command waybar
 xwayland enable
 
@@ -33,7 +34,7 @@ default_border pixel 1
 gaps inner 8
 font "JetBrains Mono" 9
 
-# output * scale 2
+output * scale 2
 
 include ~/.config/sway/themes/catppuccin-macchiato
 
