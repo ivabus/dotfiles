@@ -50,6 +50,7 @@ alias timestamp='date -u +%FT%TZ'
 alias yt-dlp-opus="yt-dlp -f 251 -x"
 alias ltcp="cp ~/.dotfiles/latex_template/{macros,preamble,template,letterfonts}.tex ."
 alias jekyll_export="jekyll b -d ./_archive && cd _archive && tar cf ../site.tar ./ && cd .. && gzip -9 -f site.tar && rm -rf _archive"
+alias rebuild="sudo nixos-rebuild switch --flake path:/etc/nixos --impure"
 
 # ffmpeg section
 
