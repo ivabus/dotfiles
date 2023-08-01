@@ -2,7 +2,8 @@
 set -e
 
 mkdir $HOME/.config
-./relink.sh
+chmod +x $HOME/.dotfiles/tools/*
+$HOME/.dotfiles/tools/relink.sh
 mkdir -p $HOME/.dotfiles/zsh/{plugins,themes}
 curl -fsSL https://raw.githubusercontent.com/ivabus/ivabus-zsh-theme/master/ivabus.zsh-theme -o $HOME/.dotfiles/zsh/themes/ivabus.zsh-theme
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.dotfiles/zsh/plugins/zsh-syntax-highlighting
