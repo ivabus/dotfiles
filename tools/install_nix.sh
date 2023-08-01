@@ -1,7 +1,9 @@
 #/bin/sh
 set -e
 
-mkdir $HOME/.config
+if [ ! -d $HOME/.config ]; then
+  mkdir $HOME/.config
+fi
 chmod +x $HOME/.dotfiles/tools/*
 $HOME/.dotfiles/tools/relink.sh
 mkdir -p $HOME/.dotfiles/zsh/{plugins,themes}
