@@ -12,16 +12,16 @@ scrolling:
 
 font:
   normal:
-    family: JetBrains Mono
+    family: JetBrains Mono NL
     style: SemiBold
 
   bold:
-    family: JetBrains Mono
-    style: Bold
+    family: JetBrains Mono NL
+    style: ExtraBold
 
   italic:
-    family: JetBrains Mono
-    style: SemiBold Italic
+    family: JetBrains Mono NL
+    style: Italic
   size: 9.0
 
 cursor:
