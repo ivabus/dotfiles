@@ -79,3 +79,6 @@ alias reload_net="sudo systemctl restart NetworkManager wpa_supplicant" # iwd"
 # Diskutil aliases
 alias dadc="diskutil apfs deleteContainer"
 alias devff="diskutil eraseVolume free free"
+
+# TODO: convert to pretty function
+alias build_rpi_nix="nix build path:/etc/nixos#nixosConfigurations.rubusidaeus.config.system.build.sdImage"

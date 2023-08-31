@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "wireplumber", "network", "battery", "sway/language", "clock"],
+    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "wireplumber", "battery", "sway/language", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -64,10 +64,10 @@
         "interval": 10
     },
     "network": {
-        "format": "Network via {ifname}",
+        "format": "Net via {ifname}",
         "tooltip-format": "{ipaddr}/{cidr}",
-        "format-linked": "Network (No IP) via {ifname}",
-        "format-disconnected": "No network",
-        "on-click": "nm-connection-editor"
+        "format-linked": "Net (No IP) via {ifname}",
+        "format-disconnected": "No net",
+        "on-click": ""
     },
 }
