@@ -51,6 +51,10 @@ alias yt-dlp-opus="yt-dlp -f 251 -x"
 alias ltcp="cp ~/.dotfiles/latex_template/{macros,preamble,template,letterfonts}.tex ."
 alias jekyll_export="jekyll b -d ./_archive && cd _archive && tar cf ../site.tar ./ && cd .. && gzip -9 -f site.tar && rm -rf _archive"
 alias rebuild="sudo nixos-rebuild switch --flake path:/etc/nixos --impure"
+alias drebuild="darwin-rebuild switch --flake path:$HOME/my/nixos"
+alias activate_brew_x86_64="eval \"$(/usr/local/bin/brew shellenv)\""
+alias flushdnsx="sudo killall -HUP mDNSResponder"
+alias rsync_music="rsync Music/Music/Media.localized/Music server.local:~/Music/Media.localized/ -av"
 
 # ffmpeg section
 
@@ -82,3 +86,6 @@ alias devff="diskutil eraseVolume free free"
 
 # TODO: convert to pretty function
 alias build_rpi_nix="nix build path:/etc/nixos#nixosConfigurations.rubusidaeus.config.system.build.sdImage"
+wine-gptk(){ WINEESYNC=1 WINEPREFIX=~/.wine /usr/local/Cellar/game-porting-toolkit/1.0.4/bin/wine64 "$@"; }
+wine-gptk32(){ WINEESYNC=1 WINEPREFIX=~/.wine /usr/local/Cellar/game-porting-toolkit/1.0.4/bin/wine32on64 "$@"; }
+alias steam-gptk="wine-gptk .wine/drive_c/Program\ Files\ \(x86\)/Steam/steam"
