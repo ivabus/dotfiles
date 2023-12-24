@@ -10,7 +10,7 @@
 window#waybar {
     color: transparent;
     background: @base;
-    opacity: 0.75;
+    opacity: 0.85;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 8px;
