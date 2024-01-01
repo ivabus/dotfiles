@@ -1,7 +1,7 @@
 @import "macchiato.css";
 * {
     font-family: "JetBrains Mono", "Noto Sans";
-    font-size: 7pt;
+    font-size: 8pt;
     border: none;
     font-weight: 400;
     padding: 1px 1px;
@@ -10,7 +10,7 @@
 window#waybar {
     color: transparent;
     background: @base;
-    opacity: 0.85;
+    opacity: 0.90;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 8px;
@@ -39,7 +39,7 @@ button:hover {
 }
 
 .modules-left {
-    padding-left: 4px;
+    padding-left: 8px;
     border-radius: 8px;
     color: @text;
 }
@@ -47,7 +47,7 @@ button:hover {
     transition: none;
     background: @base;
     color: @text;
-    padding-right: 4px;
+    padding-right: 8px;
 }
 
 #workspaces {
@@ -58,7 +58,7 @@ button:hover {
 }
 
 #language, #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #mpd, #custom-loadavg, #custom-uptime, #wireplumber {
-    padding: 0 4px;
+    padding: 0 8px;
     margin: 2 1px;
     background-color: @mantle;
     border-radius: 8px;
@@ -82,5 +82,5 @@ label:focus {
 
 #language {
     padding: 0 4px;
-    min-width: 16px;
+    min-width: 24px;
 }

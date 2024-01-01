@@ -34,9 +34,9 @@ xwayland enable
 
 default_border pixel 1
 gaps inner 8
-font "JetBrains Mono" 9
+font "JetBrains Mono" 11
 
-#output * scale 2
+output * scale 1.666
 
 include ~/.config/sway/themes/catppuccin-macchiato
 
