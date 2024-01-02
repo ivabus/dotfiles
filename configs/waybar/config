@@ -58,9 +58,9 @@
         "interval": 1
     },
     "battery": {
-        "format": "Battery: {capacity}%",
-        "format-charging": "Battery: {capacity}% (charging)",
-        "format-plugged": "Battery: {capacity}% (plugged)",
+        "format": "Bat: {capacity}%",
+        "format-charging": "Bat: {capacity}% (charging)",
+        "format-plugged": "Bat: {capacity}% (plugged)",
         "interval": 10
     },
     "network": {
