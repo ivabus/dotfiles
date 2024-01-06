@@ -53,7 +53,9 @@ alias jekyll_export="jekyll b -d ./_archive && cd _archive && tar cf ../site.tar
 alias rebuild="sudo nixos-rebuild switch --flake path:/etc/nixos --impure"
 alias drebuild="darwin-rebuild switch --flake path:$HOME/my/nixos"
 alias flushdnsx="sudo killall -HUP mDNSResponder"
-alias rsync_music="rsync Music/Music/Media.localized/Music server.local:~/Music/Media.localized/ -av"
+alias restart_audio="systemctl --user restart pipewire.service pipewire-pulse.service wireplumber.service"
+# 2340x2340 - max res for iPhone 13 mini
+alias start_airplay="uxplay -p -vs waylandsink -n $(hostname) -nh -fps 60 -s 2340x2340@60"
 
 # ffmpeg section
 
