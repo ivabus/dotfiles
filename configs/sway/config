@@ -165,8 +165,6 @@ for_window [app_id="pavucontrol"] floating enable, resize 600 300, move absolute
 for_window [app_id="nm-connection-editor"] floating enable, resize 300 150, move absolute position 25ppt 25ppt
 
 # Autostart
-exec alacritty --class bottom -e btm
-for_window [app_id="bottom"] move container to workspace number 10
-exec keepassxc
-for_window [class="KeePassXC"] move container to workspace 9
+exec alacritty --class btop -e btop
+for_window [app_id="btop"] move container to workspace number 10
 
