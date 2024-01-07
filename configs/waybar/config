@@ -1,9 +1,9 @@
 {
     "height": 38,
     "position": "top",
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": ["sway/workspaces", "tray","sway/mode"],
     "modules-center": [],
-    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "wireplumber", "battery", "sway/language", "clock"],
+    "modules-right": ["idle_inhibitor", "cpu", "memory", "wireplumber", "battery", "sway/language", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
