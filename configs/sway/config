@@ -17,13 +17,15 @@ input type:keyboard {
 }
 
 input type:touchpad {
-    tap enabled
+    tap disabled
     dwt disabled
     natural_scroll enabled
 }
 
 input "1452:849:Apple_MTP_multi-touch" {
     scroll_factor 0.25
+    accel_profile adaptive
+    pointer_accel 0.1
 }
 
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
@@ -32,9 +34,9 @@ xwayland enable
 
 default_border pixel 1
 gaps inner 8
-font "JetBrains Mono" 9
+font "JetBrains Mono" 11
 
-#output * scale 2
+output * scale 1.666
 
 include ~/.config/sway/themes/catppuccin-macchiato
 
@@ -60,12 +62,12 @@ bindsym $mod+Shift+BackSpace exec killall -s SIGINT wf-recorder
 
 # Symbols bind
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+f exec $filemgr
+bindsym $mod+Shift+e exec $filemgr
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -f 'JetBrains Mono 9' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' -B 'Lock screen' '$HOME/.config/sway/lock.sh'
+bindsym $mod+Shift+Escape exec swaynag -f 'JetBrains Mono 9' -e bottom -t warning -m "What would you like to do?" -B 'Exit sway' 'swaymsg exit' -B 'Power off' 'systemctl poweroff' -B 'Reboot' 'systemctl reboot' -B 'Lock screen' '$HOME/.config/sway/lock.sh'
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -110,7 +112,7 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
@@ -164,8 +166,6 @@ for_window [app_id="pavucontrol"] floating enable, resize 600 300, move absolute
 for_window [app_id="nm-connection-editor"] floating enable, resize 300 150, move absolute position 25ppt 25ppt
 
 # Autostart
-exec alacritty --class bottom -e btm
-for_window [app_id="bottom"] move container to workspace number 10
-exec keepassxc
-for_window [class="KeePassXC"] move container to workspace 9
+exec alacritty --class btop -e btop
+for_window [app_id="btop"] move container to workspace number 10
 

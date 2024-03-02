@@ -1,4 +1,4 @@
-# ivabus-dotfiles
+# My dotfiles
 
 Features:
 
@@ -25,10 +25,13 @@ curl iva.bz/d | sh
 
 Just run `upgrade_dotfiles` in your shell. Script will `git pull`, then relink old dotfiles, link new if needed and upgrade oh-my-zsh.
 
-# screenshot
-#![screenshot-2022-12-08_18-08-29](https://user-images.githubusercontent.com/71599788/206481983-5dac2d62-5aea-4ccf-990a-b9ee6d53422f.png)
+### Home-manager example
 
-[Repo Packages](https://ivabus.dev/pkgs), [AUR packages](https://ivabus.dev/aur).
+See [ivabus/nixos/common/dotfiles.nix](https://github.com/ivabus/nixos/blob/master/common/dotfiles.nix) for example
+
+# screenshot
+
+![screenshot-2024-01-06_10-36-35](https://github.com/ivabus/dotfiles/assets/71599788/07d6864e-6982-4137-b51e-e126235c0710)
 
 ## Environment
 

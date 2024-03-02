@@ -1,9 +1,9 @@
 {
-    "height": 32,
+    "height": 38,
     "position": "top",
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": ["sway/workspaces", "tray","sway/mode"],
     "modules-center": [],
-    "modules-right": ["tray", "idle_inhibitor", "cpu", "memory", "wireplumber", "battery", "sway/language", "clock"],
+    "modules-right": ["idle_inhibitor", "cpu", "memory", "wireplumber", "battery", "sway/language", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -58,9 +58,9 @@
         "interval": 1
     },
     "battery": {
-        "format": "Battery: {capacity}%",
-        "format-charging": "Battery: {capacity}% (charging)",
-        "format-plugged": "Battery: {capacity}% (plugged)",
+        "format": "Bat: {capacity}%",
+        "format-charging": "Bat: {capacity}% (charging)",
+        "format-plugged": "Bat: {capacity}% (plugged)",
         "interval": 10
     },
     "network": {
