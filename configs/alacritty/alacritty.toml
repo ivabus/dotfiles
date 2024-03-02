@@ -70,10 +70,6 @@ text = "#24273A"
 cursor = "#B7BDF8"
 text = "#24273A"
 
-[cursor]
-blinking = "on"
-shape = "Block"
-
 [font]
 size = 9.0
 
