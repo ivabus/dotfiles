@@ -49,8 +49,9 @@ exec swayidle -w timeout 60 '$HOME/.config/sway/lock.sh'
 # Screenshots
 
 set $screenshot_file \"$HOME/Pictures/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').png\"
-bindsym $mod+o exec grim $screenshot_file
-bindsym $mod+p exec (slurp | grim -g- $screenshot_file)
+bindsym Mod3+Shift+3 exec grim $screenshot_file
+bindsym Mod3+Shift+4 exec (slurp | grim -g- $screenshot_file)
+bindsym Mod3+Shift+5 exec (swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | "\(.rect.x+.window_rect.x),\(.rect.y+.window_rect.y) \(.window_rect.width)x\(.window_rect.height)"' | slurp | grim -g- $screenshot_file)
 
 # Recordings
 
